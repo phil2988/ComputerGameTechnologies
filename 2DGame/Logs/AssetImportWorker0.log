@@ -15,7 +15,7 @@ C:/Users/phill/School/8.Semester/ComputerGameTechnologies/2DGame
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50103
+52924
 Successfully changed project path to: C:/Users/phill/School/8.Semester/ComputerGameTechnologies/2DGame
 C:/Users/phill/School/8.Semester/ComputerGameTechnologies/2DGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/phill/School/8.Semester/ComputerGameTechnologies/2DGame
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20464] Host "[IP] 192.168.2.88 [Port] 0 [Flags] 2 [Guid] 183341452 [EditorId] 183341452 [Version] 1048832 [Id] WindowsEditor(7,Phillip_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [480] Host "[IP] 172.26.128.1 [Port] 0 [Flags] 2 [Guid] 3377378949 [EditorId] 3377378949 [Version] 1048832 [Id] WindowsEditor(7,Phillip_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20464] Host "[IP] 192.168.2.88 [Port] 0 [Flags] 2 [Guid] 183341452 [EditorId] 183341452 [Version] 1048832 [Id] WindowsEditor(7,Phillip_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [480] Host "[IP] 172.26.128.1 [Port] 0 [Flags] 2 [Guid] 3377378949 [EditorId] 3377378949 [Version] 1048832 [Id] WindowsEditor(7,Phillip_Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
-Library Redirect Path: Library/Refreshing native plugins compatible for Editor in 4589.50 ms, found 4 plugins.
+Library Redirect Path: Library/Refreshing native plugins compatible for Editor in 41.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.1.9f1 (f3f94c8cdc49)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.1.9f1/Editor/Data/Resources/UnitySubsystems
@@ -70,7 +70,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.1.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.1.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.1.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56884
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -85,45 +85,45 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 1.121489 seconds.
-- Loaded All Assemblies, in 29.135 seconds
+Registered in 0.056070 seconds.
+- Loaded All Assemblies, in 13.899 seconds
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 1563 ms
+Android Extension - Scanning For ADB Devices 1766 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Finished resetting the current domain, in  4.522 seconds
-Domain Reload Profiling: 33652ms
-	BeginReloadAssembly (20700ms)
+- Finished resetting the current domain, in  3.565 seconds
+Domain Reload Profiling: 17438ms
+	BeginReloadAssembly (9787ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (1617ms)
-	RebuildNativeTypeToScriptingClass (50ms)
-	initialDomainReloadingComplete (1310ms)
-	LoadAllAssembliesAndSetupDomain (5451ms)
-		LoadAssemblies (20696ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (766ms)
+	RebuildNativeTypeToScriptingClass (105ms)
+	initialDomainReloadingComplete (1299ms)
+	LoadAllAssembliesAndSetupDomain (1914ms)
+		LoadAssemblies (9304ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (5435ms)
-			TypeCache.Refresh (5431ms)
-				TypeCache.ScanAssembly (4291ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (4524ms)
+		AnalyzeDomain (1864ms)
+			TypeCache.Refresh (1859ms)
+				TypeCache.ScanAssembly (1757ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (3566ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (4244ms)
+		SetupLoadedEditorAssemblies (3401ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2408ms)
-			SetLoadedEditorAssemblies (14ms)
-			BeforeProcessingInitializeOnLoad (173ms)
-			ProcessInitializeOnLoadAttributes (1418ms)
-			ProcessInitializeOnLoadMethodAttributes (231ms)
+			InitializePlatformSupportModulesInManaged (2412ms)
+			SetLoadedEditorAssemblies (17ms)
+			BeforeProcessingInitializeOnLoad (64ms)
+			ProcessInitializeOnLoadAttributes (632ms)
+			ProcessInitializeOnLoadMethodAttributes (275ms)
 			AfterProcessingInitializeOnLoad (0ms)
-			EditorAssembliesLoaded (1ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
 ========================================================================
@@ -144,532 +144,52 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Symbol file LoadedFromMemory doesn't match image C:\Users\phill\School\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\phill\School\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in 30.481 seconds
-Refreshing native plugins compatible for Editor in 21.93 ms, found 4 plugins.
+- Loaded All Assemblies, in  3.142 seconds
+Refreshing native plugins compatible for Editor in 7.40 ms, found 4 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.244 seconds
-Domain Reload Profiling: 34720ms
-	BeginReloadAssembly (712ms)
+- Finished resetting the current domain, in  2.158 seconds
+Domain Reload Profiling: 5292ms
+	BeginReloadAssembly (997ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
+		DisableScriptedObjects (14ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (80ms)
-	RebuildCommonClasses (109ms)
-	RebuildNativeTypeToScriptingClass (32ms)
-	initialDomainReloadingComplete (251ms)
-	LoadAllAssembliesAndSetupDomain (29369ms)
-		LoadAssemblies (26190ms)
+		CreateAndSetChildDomain (73ms)
+	RebuildCommonClasses (110ms)
+	RebuildNativeTypeToScriptingClass (45ms)
+	initialDomainReloadingComplete (102ms)
+	LoadAllAssembliesAndSetupDomain (1879ms)
+		LoadAssemblies (1519ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (3452ms)
-			TypeCache.Refresh (3321ms)
-				TypeCache.ScanAssembly (3073ms)
-			ScanForSourceGeneratedMonoScriptInfo (108ms)
-			ResolveRequiredComponents (21ms)
-	FinalizeReload (4248ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (3273ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (157ms)
-			SetLoadedEditorAssemblies (61ms)
-			BeforeProcessingInitializeOnLoad (1168ms)
-			ProcessInitializeOnLoadAttributes (1732ms)
-			ProcessInitializeOnLoadMethodAttributes (139ms)
-			AfterProcessingInitializeOnLoad (14ms)
-			EditorAssembliesLoaded (2ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (29ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 8.42 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4089 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 63 unused Assets / (56.6 KB). Loaded Objects now: 4647.
-Memory consumption went from 148.2 MB to 148.1 MB.
-Total: 10.857100 ms (FindLiveObjects: 0.569200 ms CreateObjectMapping: 0.682600 ms MarkObjects: 9.289100 ms  DeleteObjects: 0.314100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 1803837.172185 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_2.asset
-  artifactKey: Guid(c30a836c12b5ca046b8850c5500adff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_2.asset using Guid(c30a836c12b5ca046b8850c5500adff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab52b677c3ef97ffd835e262fe7ef181') in 0.217203 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_31.asset
-  artifactKey: Guid(f6d4829a6950ff94e85270d3fa1f75ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_31.asset using Guid(f6d4829a6950ff94e85270d3fa1f75ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6c27f59154a00561330ea1b8ba1078d') in 0.038990 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_59.asset
-  artifactKey: Guid(d1b36f97a21780343bae80aa0501ed33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_59.asset using Guid(d1b36f97a21780343bae80aa0501ed33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f39cf60b372e68201305fbdf9b2e2c11') in 0.038948 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_55.asset
-  artifactKey: Guid(74d33214d8663e14a9ff6f916f417124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_55.asset using Guid(74d33214d8663e14a9ff6f916f417124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18edde6a2d600b73abe36db30780b4fe') in 0.038149 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_6.asset
-  artifactKey: Guid(9cfe2171135f120429c700c27662a5d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_6.asset using Guid(9cfe2171135f120429c700c27662a5d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536d4c064baafdb67cd0dc09b8523ab4') in 0.034068 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_33.asset
-  artifactKey: Guid(46b9ac16ba9ac6d4a9d82ef266ac5150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_33.asset using Guid(46b9ac16ba9ac6d4a9d82ef266ac5150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380e6bdc1f2aaaea03a05d3eb3ecce23') in 0.043188 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Texture/TX Struct.png
-  artifactKey: Guid(dda6bbdb704d84847b38f9eced72bf59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Texture/TX Struct.png using Guid(dda6bbdb704d84847b38f9eced72bf59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '920f1958387b8cd3770df80d669090d7') in 0.259562 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 24
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_49.asset
-  artifactKey: Guid(0746a94badf11734cb00883121ea7f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_49.asset using Guid(0746a94badf11734cb00883121ea7f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e25327850a7923f5c6b328e494efbce5') in 0.035392 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_53.asset
-  artifactKey: Guid(60fe87e379223bd4ca197f2113bf4448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_53.asset using Guid(60fe87e379223bd4ca197f2113bf4448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7abd1ec37275fcb7860a4aa513d54d1') in 0.046869 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_54.asset
-  artifactKey: Guid(4c98f0c7991a6af4784c33b1da8d20c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_54.asset using Guid(4c98f0c7991a6af4784c33b1da8d20c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5d7cc2d59c164ff5a83aad4a0304b9') in 0.045333 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_43.asset
-  artifactKey: Guid(ada4c775f3d0f8e459af2867f50f7b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_43.asset using Guid(ada4c775f3d0f8e459af2867f50f7b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd10881ae01b0e4fa6aa5d42bb5f375af') in 0.047757 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_5.asset
-  artifactKey: Guid(4e1e2fa91134aaf47a8d4022b0d0a6ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_5.asset using Guid(4e1e2fa91134aaf47a8d4022b0d0a6ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '263be7e3c9855aad25de435d6977e431') in 0.038992 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_42.asset
-  artifactKey: Guid(083f670d86161df46808cdc2e1eb02ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_42.asset using Guid(083f670d86161df46808cdc2e1eb02ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8279306d7173af5ecedfa0e7a3c57b8') in 0.036851 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_46.asset
-  artifactKey: Guid(ca8588300bdb03149a3be05ab743ed56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_46.asset using Guid(ca8588300bdb03149a3be05ab743ed56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a2588621b20e9856732e2efb7f65f8e') in 0.043806 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_3.asset
-  artifactKey: Guid(e56da427db9e7c147b3012603805adf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_3.asset using Guid(e56da427db9e7c147b3012603805adf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c8bc93afcdf211e2d38ddc1f6d3c061') in 0.036086 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_28.asset
-  artifactKey: Guid(18cbc117f3291f642b4ac9ca0aa22178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_28.asset using Guid(18cbc117f3291f642b4ac9ca0aa22178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2cc060ab6fa77930b48f03c4d22c43e') in 0.041316 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Shadow Tileset Wall 3.asset
-  artifactKey: Guid(74fb019e61cfa1144910a53906988a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Shadow Tileset Wall 3.asset using Guid(74fb019e61cfa1144910a53906988a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4df8a7f0e0e2eb942695024c2c84c994') in 0.041429 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_26.asset
-  artifactKey: Guid(482f111f39d0bb54587ed8f02772d8d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_26.asset using Guid(482f111f39d0bb54587ed8f02772d8d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb74e3b1992fa76f28ef19ff71799106') in 0.041553 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000129 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png
-  artifactKey: Guid(9f8f114589864b6489859a58fbb6baf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png using Guid(9f8f114589864b6489859a58fbb6baf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ce6bcdfa8fbb7586257dec23881674b') in 0.438340 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 63
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_36.asset
-  artifactKey: Guid(0f39ce13cb3663f47aa017b24e28c59d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_36.asset using Guid(0f39ce13cb3663f47aa017b24e28c59d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a863b0dc0cd5b1c2f01ea21140957847') in 0.042931 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.001183 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_35.asset
-  artifactKey: Guid(6008c5e0b4430914e81e97e42cb887da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_35.asset using Guid(6008c5e0b4430914e81e97e42cb887da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '173243fcc0959f98dc2d9befea188b67') in 0.035608 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_52.asset
-  artifactKey: Guid(057832b6b41e7b54697628c449199e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_52.asset using Guid(057832b6b41e7b54697628c449199e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebaca387e8110ab992e3dec53e5fc251') in 0.038220 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_37.asset
-  artifactKey: Guid(36928b9ff4f11f543833d3dbad299083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_37.asset using Guid(36928b9ff4f11f543833d3dbad299083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7d062250672b356c72a07e3be83854a') in 0.037347 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000452 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Shadow Tileset Wall 2.asset
-  artifactKey: Guid(2f3b07d6ad9eccc47b6cd451a5df9a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Shadow Tileset Wall 2.asset using Guid(2f3b07d6ad9eccc47b6cd451a5df9a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ecffad0099445af59b7c1456de6a4a1') in 0.037401 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_41.asset
-  artifactKey: Guid(4dfdf77930f6d2b4b986bb91965139a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_41.asset using Guid(4dfdf77930f6d2b4b986bb91965139a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e40f8cf2f85c69b6507117bc22a07d7') in 0.043572 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_30.asset
-  artifactKey: Guid(5c0720cf3f2e0fd40ab1e12cd776ccdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_30.asset using Guid(5c0720cf3f2e0fd40ab1e12cd776ccdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aad13768d2f2a855372b123234bbc3d7') in 0.041154 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000441 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Shadow Tileset Wall 1.asset
-  artifactKey: Guid(89be3abc25335b342b0424693ef088a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Shadow Tileset Wall 1.asset using Guid(89be3abc25335b342b0424693ef088a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '066d9225c689e434355b00e041aa8316') in 0.038175 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_39.asset
-  artifactKey: Guid(815a98150ae40f24482bf4ae569f8718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_39.asset using Guid(815a98150ae40f24482bf4ae569f8718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b35e417e53318d6e94f953d80d784246') in 0.046957 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_34.asset
-  artifactKey: Guid(3e71cd8fd02745948b1ad875522f5f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_34.asset using Guid(3e71cd8fd02745948b1ad875522f5f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feec2908e6b1d76578bf09172152cb84') in 0.041573 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000126 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_40.asset
-  artifactKey: Guid(f0efd6c3ea0abaa4c906ce6de5e78168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_40.asset using Guid(f0efd6c3ea0abaa4c906ce6de5e78168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5e2abf39ece8d5c84449100ba18f7d4') in 0.033086 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000097 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_50.asset
-  artifactKey: Guid(b857b6b27935d14478beeb0a19d9ed05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_50.asset using Guid(b857b6b27935d14478beeb0a19d9ed05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e781aef185cdf3e4be6ed1afd9962fc9') in 0.041231 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000690 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_56.asset
-  artifactKey: Guid(5fe40d7b004adde4293bdf59101e1f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_56.asset using Guid(5fe40d7b004adde4293bdf59101e1f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9db17b4f282f7c90ac983781e35ecc4') in 0.044068 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000424 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png
-  artifactKey: Guid(8501e10b1eafde34586080ba342fdc0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png using Guid(8501e10b1eafde34586080ba342fdc0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a1fad1a73de761cd0854bf481e920a8') in 0.121269 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_4.asset
-  artifactKey: Guid(b6bf52d8442ce1847a688215b6ba04da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_4.asset using Guid(b6bf52d8442ce1847a688215b6ba04da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '248b094fc6d6dd5a1709ed175f60bb31') in 0.049133 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000072 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_44.asset
-  artifactKey: Guid(6f6e5fa7aced9ba499e35a5f79839641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_44.asset using Guid(6f6e5fa7aced9ba499e35a5f79839641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a6c6697600e0b73c1641f20e83b8f34') in 0.037093 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000088 seconds.
-  path: Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_38.asset
-  artifactKey: Guid(de8a5bc2e5c5a1e4c8c9861234c3bc5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Pixel Art Top Down - Basic/Tile Palette/TP Wall/TX Tileset Wall_38.asset using Guid(de8a5bc2e5c5a1e4c8c9861234c3bc5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a43220e1c724df60659149dc4a6debd') in 0.043040 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 163.479456 seconds.
-  path: Assets/Scripts/TerrainGeneration.cs
-  artifactKey: Guid(5fb9eba96d4ae0647b26812a7803eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TerrainGeneration.cs using Guid(5fb9eba96d4ae0647b26812a7803eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740fef5c770e6afadbb1cf1c81057e75') in 0.002005 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 47.828012 seconds.
-  path: Assets/Scripts/TerrainGeneration.cs
-  artifactKey: Guid(5fb9eba96d4ae0647b26812a7803eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TerrainGeneration.cs using Guid(5fb9eba96d4ae0647b26812a7803eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01bfa0b3e0812bf252f737eaf0f5b5b2') in 0.001817 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 29.054727 seconds.
-  path: Assets/Scripts/TerrainGeneration.cs
-  artifactKey: Guid(5fb9eba96d4ae0647b26812a7803eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TerrainGeneration.cs using Guid(5fb9eba96d4ae0647b26812a7803eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5d4c8b286dedfd25832d69d053e285b') in 0.001078 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-Symbol file LoadedFromMemory doesn't match image C:\Users\phill\School\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\phill\School\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.866 seconds
-Refreshing native plugins compatible for Editor in 5.14 ms, found 4 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.801 seconds
-Domain Reload Profiling: 5659ms
-	BeginReloadAssembly (463ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (26ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (132ms)
-	RebuildCommonClasses (96ms)
-	RebuildNativeTypeToScriptingClass (30ms)
-	initialDomainReloadingComplete (70ms)
-	LoadAllAssembliesAndSetupDomain (1196ms)
-		LoadAssemblies (842ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (577ms)
-			TypeCache.Refresh (560ms)
-				TypeCache.ScanAssembly (540ms)
-			ScanForSourceGeneratedMonoScriptInfo (7ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (3803ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1658ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (80ms)
-			SetLoadedEditorAssemblies (11ms)
-			BeforeProcessingInitializeOnLoad (367ms)
-			ProcessInitializeOnLoadAttributes (1015ms)
-			ProcessInitializeOnLoadMethodAttributes (133ms)
-			AfterProcessingInitializeOnLoad (51ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (29ms)
-Refreshing native plugins compatible for Editor in 15.54 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4074 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 34 unused Assets / (34.6 KB). Loaded Objects now: 4687.
-Memory consumption went from 144.2 MB to 144.1 MB.
-Total: 20.161000 ms (FindLiveObjects: 1.338800 ms CreateObjectMapping: 2.025200 ms MarkObjects: 16.683300 ms  DeleteObjects: 0.110100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 176.481697 seconds.
-  path: Assets/Scripts/TerrainGeneration.cs
-  artifactKey: Guid(5fb9eba96d4ae0647b26812a7803eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TerrainGeneration.cs using Guid(5fb9eba96d4ae0647b26812a7803eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '028e7b9f5ff2c56ad589b92b89e1b24d') in 0.004315 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 121.877978 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(5f700c18acad03746a960ae81363084c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(5f700c18acad03746a960ae81363084c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ea891891abe741604196acb209c2311') in 0.000997 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-Symbol file LoadedFromMemory doesn't match image C:\Users\phill\School\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\phill\School\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  2.301 seconds
-Refreshing native plugins compatible for Editor in 8.38 ms, found 4 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.149 seconds
-Domain Reload Profiling: 5443ms
-	BeginReloadAssembly (675ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (51ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (200ms)
-	RebuildCommonClasses (107ms)
-	RebuildNativeTypeToScriptingClass (35ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (1410ms)
-		LoadAssemblies (969ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (760ms)
-			TypeCache.Refresh (737ms)
-				TypeCache.ScanAssembly (712ms)
-			ScanForSourceGeneratedMonoScriptInfo (9ms)
+		AnalyzeDomain (854ms)
+			TypeCache.Refresh (787ms)
+				TypeCache.ScanAssembly (753ms)
+			ScanForSourceGeneratedMonoScriptInfo (53ms)
 			ResolveRequiredComponents (12ms)
-	FinalizeReload (3149ms)
+	FinalizeReload (2159ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1582ms)
+		SetupLoadedEditorAssemblies (1608ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (72ms)
-			SetLoadedEditorAssemblies (15ms)
-			BeforeProcessingInitializeOnLoad (523ms)
-			ProcessInitializeOnLoadAttributes (900ms)
-			ProcessInitializeOnLoadMethodAttributes (61ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (12ms)
+			BeforeProcessingInitializeOnLoad (516ms)
+			ProcessInitializeOnLoadAttributes (950ms)
+			ProcessInitializeOnLoadMethodAttributes (67ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 5.82 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 6.20 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4074 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 34 unused Assets / (34.8 KB). Loaded Objects now: 4689.
-Memory consumption went from 144.2 MB to 144.1 MB.
-Total: 8.699600 ms (FindLiveObjects: 1.207200 ms CreateObjectMapping: 0.717300 ms MarkObjects: 6.677600 ms  DeleteObjects: 0.096200 ms)
+Unloading 4089 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (56.6 KB). Loaded Objects now: 4647.
+Memory consumption went from 148.0 MB to 147.9 MB.
+Total: 8.072200 ms (FindLiveObjects: 0.676600 ms CreateObjectMapping: 0.553400 ms MarkObjects: 6.545300 ms  DeleteObjects: 0.293900 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
@@ -700,50 +220,50 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Symbol file LoadedFromMemory doesn't match image C:\Users\phill\School\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\phill\School\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.414 seconds
-Refreshing native plugins compatible for Editor in 5.50 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.827 seconds
+Refreshing native plugins compatible for Editor in 10.87 ms, found 4 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.900 seconds
-Domain Reload Profiling: 3311ms
-	BeginReloadAssembly (347ms)
+- Finished resetting the current domain, in  2.634 seconds
+Domain Reload Profiling: 4457ms
+	BeginReloadAssembly (398ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (29ms)
+		DisableScriptedObjects (27ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (88ms)
-	RebuildCommonClasses (55ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (35ms)
-	LoadAllAssembliesAndSetupDomain (954ms)
-		LoadAssemblies (624ms)
+		CreateAndSetChildDomain (101ms)
+	RebuildCommonClasses (74ms)
+	RebuildNativeTypeToScriptingClass (26ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (1266ms)
+		LoadAssemblies (739ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (502ms)
-			TypeCache.Refresh (490ms)
-				TypeCache.ScanAssembly (470ms)
+		AnalyzeDomain (731ms)
+			TypeCache.Refresh (720ms)
+				TypeCache.ScanAssembly (698ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1902ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (2635ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1017ms)
+		SetupLoadedEditorAssemblies (1456ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (48ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (304ms)
-			ProcessInitializeOnLoadAttributes (594ms)
-			ProcessInitializeOnLoadMethodAttributes (58ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
+			InitializePlatformSupportModulesInManaged (63ms)
+			SetLoadedEditorAssemblies (12ms)
+			BeforeProcessingInitializeOnLoad (406ms)
+			ProcessInitializeOnLoadAttributes (913ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 6.75 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 11.34 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4075 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 34 unused Assets / (34.8 KB). Loaded Objects now: 4691.
-Memory consumption went from 144.4 MB to 144.4 MB.
-Total: 5.660700 ms (FindLiveObjects: 0.312100 ms CreateObjectMapping: 0.262700 ms MarkObjects: 4.996600 ms  DeleteObjects: 0.087800 ms)
+Unloading 34 unused Assets / (34.6 KB). Loaded Objects now: 4650.
+Memory consumption went from 144.1 MB to 144.0 MB.
+Total: 11.566500 ms (FindLiveObjects: 0.474500 ms CreateObjectMapping: 0.972800 ms MarkObjects: 9.981100 ms  DeleteObjects: 0.135200 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
