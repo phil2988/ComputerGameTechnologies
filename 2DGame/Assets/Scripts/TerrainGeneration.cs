@@ -1,134 +1,371 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class TerrainGeneration : MonoBehaviour
 {
-    public List<Tile> grassTiles;
-    public List<Tile> mainPathTiles;
-    public List<Tile> pathTiles;
-    public Tilemap grassTilemap;
+    public enum TileTypes
+    {
+        PathFull,
+        PathPartial,
+        Void,
+        Grass,
+        Test
+    }
+
+    public Dictionary<TileTypes, Color> TileColors = new() {
+        { TileTypes.PathFull, Color.black },
+        { TileTypes.PathPartial, Color.blue },
+        { TileTypes.Void , Color.white },
+        { TileTypes.Grass , Color.green },
+        { TileTypes.Test , Color.yellow },
+    };
+
+    public List<Tile> grassTiles = new();
+    public List<Tile> fullPathTiles = new();
+    public List<Tile> partialPathTiles = new();
+    public Tilemap terrainTileMap;
     public Tile voidTile;
+    public Tile testTile;
 
     // Width and height of the texture in pixels.
-    readonly int pixWidth = 1000;
-    readonly int pixHeight = 1000;
+    readonly int pixWidth = 500;
+    readonly int pixHeight = 500;
 
+    // Texture for holding the generation data
+    Texture2D terrainTexture;
+    readonly Vector3Int startPos = new(-250, -250, 0); 
 
-    // Start is called before the first frame update
     void Start()
     {
-        //Renderer renderer = GetComponent<Renderer>();
-        //renderer.material.mainTexture = ThinLines(GeneratePerlinTexture());
+        terrainTexture = new(pixWidth, pixHeight);
 
-        grassTiles = new List<Tile>();
-        mainPathTiles = new List<Tile>();
-        //voidTile = new();
-        //Texture2D voidTileTexture = new(16, 16);
+        Debug.Log("Loading tiles from resouces...");
+        LoadTiles();
+        Debug.Log("Done!");
 
-        //for (int x = 0; x < 16; x++)
-        //{
-                        
-        //}
-        //voidTileTexture.SetPixel()
+        Debug.Log("Generating void section of texture...");
+        GenerateVoidArea();
+        terrainTexture.Apply();
+        Debug.Log("Done!");
 
-        //Sprite voidTileSprite = new Sprite(new Rect(0, 0, 16, 16), );
+        Debug.Log("Generating path section of texture...");
+        GeneratePathArea(repetitions: 5);
+        terrainTexture.Apply();
+        Debug.Log("Done!");
 
+        Debug.Log("Generating path padding section of texture...");
+        GeneratePathPadding();
+        terrainTexture.Apply();
+        Debug.Log("Done!");
+
+        //Debug.Log("Generating path padding section of texture...");
+        //GeneratePointsOfInterest();
+        //terrainTexture.Apply();
+        //Debug.Log("Done!");
+
+        Debug.Log("Generating grass padding of paths...");
+        GenerateGrassPadding();
+        terrainTexture.Apply();
+        Debug.Log("Done!");
+
+        Debug.Log("Generating grass padding of paths...");
+        GenerateGrassPadding();
+        terrainTexture.Apply();
+        Debug.Log("Done!");
+
+        Renderer renderer = GetComponent<Renderer>();
+        renderer.material.mainTexture = terrainTexture;
+
+        Debug.Log("Applying terrain data to tilemap...");
+        PaintTerrain();
+        Debug.Log("Done!");
+
+        Debug.Log("Done Generating Texture!");
+    }
+
+    void LoadTiles()
+    {
         // Load all the tp grass tiles 
         var tilesFolder = Resources.LoadAll<Tile>("TP Grass/");
 
         for (int i = 0; i < tilesFolder.Length; i++)
         {
             // Split them into path tiles and grass tiles
-            if(i <= 31)
+            if (i <= 31)
             {
                 grassTiles.Add(tilesFolder[i]);
             }
-            if(i >= 32 && i <= 38)
+            if (i >= 32 && i <= 38)
             {
-                mainPathTiles.Add(tilesFolder[i]);
+                fullPathTiles.Add(tilesFolder[i]);
             }
-            if(i >= 39 && i <= 45)
+            if (i >= 39 && i <= tilesFolder.Length - 3)
             {
-                pathTiles.Add(tilesFolder[i]);
+                partialPathTiles.Add(tilesFolder[i]);
+            }
+            if(i == tilesFolder.Length -2)
+            {
+                voidTile = tilesFolder[i];
+            }
+            if (i == tilesFolder.Length -1)
+            {
+                testTile = tilesFolder[i];
             }
         }
-
-        GenerateGrassArea(new Vector2Int(-(pixWidth/2), -(pixHeight/2)), new Vector2Int(pixWidth / 2, pixHeight / 2));
-        GeneratePathArea(new Vector2Int(-(pixWidth / 2), -(pixHeight / 2)));
     }
 
-    void GenerateGrassArea(Vector2Int areaStart, Vector2Int areaEnd)
+    void GenerateVoidArea(TileTypes tileType = TileTypes.Void)
     {
-        for (int x = areaStart.x; x < areaEnd.x; x++)
+        for (int x = 0; x < pixWidth; x++)
         {
-            for (int y = areaStart.y; y < areaEnd.y; y++)
+            for (int y = 0; y < pixHeight; y++)
             {
-                grassTilemap.SetTile(
-                    new Vector3Int(x, y, 0), 
-                    grassTiles[UnityEngine.Random.Range(0, grassTiles.Count - 1)]);
+                terrainTexture.SetPixel(
+                    x,
+                    y,
+                    TileColors.Where((tile) => tile.Key == tileType).Single().Value
+                );
             }
         }
     }
 
-    void GeneratePathArea(Vector2Int areaStart)
+    void GeneratePathArea(TileTypes tileType = TileTypes.PathFull, int repetitions = 1)
     {
-        Renderer renderer = GetComponent<Renderer>();
-        renderer.material.mainTexture = ThinLines(GeneratePerlinTexture());
+        Texture2D perlinData = new(pixWidth, pixHeight);
 
-        var thinnedPerlin = ThinLines(GeneratePerlinTexture());
+        if(repetitions > 1)
+        {
+            var thinPerlinTextures = new List<Texture2D>();
+            // Generate all the perlins needed
+            for (int i = 0; i < repetitions; i++)
+            {
+                thinPerlinTextures.Add(ThinLines(GeneratePerlinTexture()));
+            }
+
+            // Combine all the perlins into one texture
+            foreach (var item in thinPerlinTextures)
+            {
+                for (int x = 0; x < pixWidth; x++)
+                {
+                    for (int y = 0; y < pixHeight; y++)
+                    {
+                        if (item.GetPixel(x, y) == Color.black)
+                        {
+                            perlinData.SetPixel(x, y, Color.black);
+                        }
+                    }
+                }
+            }
+        }
 
         for (int x = 0; x < pixWidth; x++)
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                if (thinnedPerlin.GetPixel(areaStart.x + x, areaStart.y + y) == Color.black)
+                if (perlinData.GetPixel(x, y) == Color.black)
                 {
-                    grassTilemap.SetTile(
-                        new Vector3Int(areaStart.x + x, areaStart.y + y, 0),
-                        mainPathTiles[UnityEngine.Random.Range(0, mainPathTiles.Count - 1)]);
-
-                    
-                }
-
-                int adjecent = 0;
-
-                if (x + 1 <= pixWidth)
-                {
-                    if (thinnedPerlin.GetPixel(areaStart.x + x + 1, areaStart.y + y) == Color.black)
-                    {
-                        adjecent++;
-                    }
-                }
-                if (x - 1 > 0)
-                {
-                    if (thinnedPerlin.GetPixel(areaStart.x + x - 1, areaStart.y + y) == Color.black)
-                    {
-                        adjecent++;
-                    }
-                }
-                if (y - 1 > 0)
-                {
-                    if (thinnedPerlin.GetPixel(areaStart.x + x, areaStart.y + y - 1) == Color.black)
-                    {
-                        adjecent++;
-                    }
-                }
-                if (y + 1 <= pixHeight)
-                {
-                    if (thinnedPerlin.GetPixel(areaStart.x + x, areaStart.y + y + 1) == Color.black)
-                    {
-                        adjecent++;
-                    }
-                }
-                if (adjecent >= 1)
-                {
-                    grassTilemap.SetTile(
-                        new Vector3Int(areaStart.x + x, areaStart.y + y, 0),
-                        pathTiles[UnityEngine.Random.Range(0, pathTiles.Count - 1)]);
+                    terrainTexture.SetPixel(
+                        x,
+                        y,
+                        TileColors.Where((tile) => tile.Key == tileType).Single().Value
+                    );
                 }
             }
+        }
+    }
+
+    void GeneratePathPadding(TileTypes tileType = TileTypes.PathPartial)
+    {
+        for (int x = 0; x < pixWidth; x++)
+        {
+            for (int y = 0; y < pixHeight; y++)
+            {
+                if(terrainTexture.GetPixel(x, y) == TileColors.Where((tile) => tile.Key == TileTypes.Void).Single().Value)
+                {
+                    int adjecentTiles = 0;
+
+                    foreach (var position in paddingNeighbourPositions)
+                    {
+                        if (
+                            terrainTexture.GetPixel(
+                                x + position.x, 
+                                y + position.y
+                            ) == TileColors.Where((tile) => tile.Key == TileTypes.PathFull).Single().Value
+                        )
+                        {
+                            adjecentTiles++;
+                        }
+                    }
+
+                    if (adjecentTiles > 0)
+                    {
+                        terrainTexture.SetPixel(
+                            x,
+                            y,
+                            TileColors.Where((tile) => tile.Key == tileType).Single().Value
+                        );
+                    }
+                }
+            }
+        }
+    }
+
+    void GenerateGrassPadding(TileTypes tileType = TileTypes.Grass)
+    {
+        for (int x = 0; x < pixWidth; x++)
+        {
+            for (int y = 0; y < pixHeight; y++)
+            {
+                if (terrainTexture.GetPixel(x, y) == TileColors.Where((tile) => tile.Key == TileTypes.Void).Single().Value)
+                {
+                    int adjecentPathTiles = 0;
+                    int adjecentGrassTiles = 0;
+
+                    foreach (var position in paddingNeighbourPositions)
+                    {
+                        if (
+                            terrainTexture.GetPixel(
+                                x + position.x,
+                                y + position.y
+                            ) == TileColors.Where((tile) => tile.Key == TileTypes.PathPartial).Single().Value
+                        )
+                        {
+                            adjecentPathTiles++;
+                        }
+
+                        if (
+                            terrainTexture.GetPixel(
+                                x + position.x,
+                                y + position.y
+                            ) == TileColors.Where((tile) => tile.Key == TileTypes.Grass).Single().Value
+                        )
+                        {
+                            adjecentGrassTiles++;
+                        }
+                    }
+
+                    if (adjecentPathTiles > 0 || adjecentGrassTiles + adjecentPathTiles >= 3)
+                    {
+                        terrainTexture.SetPixel(
+                            x,
+                            y,
+                            TileColors.Where((tile) => tile.Key == tileType).Single().Value
+                        );
+                    }
+                }
+            }
+        }
+
+    }
+
+    void GeneratePointsOfInterest(int likelyhood = 100 /*int radius = 15, int differentRadius = 4*/)
+    {
+        for (int x = 0; x < pixWidth; x++)
+        {
+            for (int y = 0; y < pixHeight; y++)
+            {
+                if(terrainTexture.GetPixel(x, y) == Color.black)
+                {
+                    var rand = UnityEngine.Random.Range(0, likelyhood);
+
+                    if(rand == 1)
+                    {
+                        terrainTexture.SetPixel(
+                            x,
+                            y,
+                            TileColors.Where((tile) => tile.Key == TileTypes.Test).Single().Value
+                        );
+                    }
+                }
+            }
+        }
+    }
+
+    void PaintTerrain()
+    {
+        // Iterate through all the pixels in the data texture
+        for (int x = 0; x < pixWidth; x++)
+        {
+            for (int y = 0; y < pixHeight; y++)
+            {
+                var tmp = terrainTexture.GetPixel(x, y);
+                // Check which type of pixel x, y is
+                var pixel = TileColors.Where((tile) => tile.Value == terrainTexture.GetPixel(x, y)).FirstOrDefault().Key;
+
+                // Color the tile according to the selected pixel
+                switch (pixel)
+                {
+                    case TileTypes.Void:
+                        terrainTileMap.SetTile(
+                            startPos + new Vector3Int(x, y, 0),
+                            GetRandomTile(TileTypes.Void)
+                        );
+                        break;
+
+                    case TileTypes.PathFull:
+                        terrainTileMap.SetTile(
+                            startPos + new Vector3Int(x, y, 0),
+                            GetRandomTile(TileTypes.PathFull)
+                        ); 
+                        break;
+
+                    case TileTypes.PathPartial:
+                        terrainTileMap.SetTile(
+                            startPos + new Vector3Int(x, y, 0),
+                            GetRandomTile(TileTypes.PathPartial)
+                        );
+                        break;
+
+                    case TileTypes.Grass:
+                        terrainTileMap.SetTile(
+                            startPos + new Vector3Int(x, y, 0),
+                            GetRandomTile(TileTypes.Grass)
+                        );
+                        break;
+
+                    case TileTypes.Test:
+                        terrainTileMap.SetTile(
+                            startPos + new Vector3Int(x, y, 0),
+                            GetRandomTile(TileTypes.Test)
+                        );
+                        break;
+
+                    default:
+                        terrainTileMap.SetTile(
+                             startPos + new Vector3Int(x, y, 0),
+                             GetRandomTile(TileTypes.Grass)
+                         );
+                        break;
+                }
+
+            }
+        }
+    }
+
+    Tile GetRandomTile(TileTypes tileType)
+    {
+        switch (tileType)
+        {
+            case TileTypes.PathFull:
+                return fullPathTiles[UnityEngine.Random.Range(0, fullPathTiles.Count)];
+
+            case TileTypes.PathPartial:
+                return partialPathTiles[UnityEngine.Random.Range(0, partialPathTiles.Count)];
+                
+            case TileTypes.Void:
+                return voidTile;
+
+            case TileTypes.Grass:
+                return grassTiles[UnityEngine.Random.Range(0, grassTiles.Count)];
+
+            case TileTypes.Test:
+                return testTile;
+
+            default:
+                throw new Exception("Invalid tile type input!");
         }
     }
 
@@ -136,30 +373,33 @@ public class TerrainGeneration : MonoBehaviour
     {
         Texture2D noiseTex = new (pixWidth, pixHeight);
 
+        // Randomize the offset value for the perlin noise
+        var perlinOffset = new Vector2(
+            UnityEngine.Random.Range(0, 100000),
+            UnityEngine.Random.Range(0, 100000)
+        );
+
         // For each pixel in the texture...
         for (int x = 0; x < pixWidth; x++)
         {
-            for (int y = 0; y < pixHeight; y++)
-            {
-                Color color = PaintPerlin(x, y);
-                noiseTex.SetPixel(x, y, color);
+                for (int y = 0; y < pixHeight; y++)
+                {
+                    Color color = PaintPerlin(x, y, 0.4f, 8f, perlinOffset);
+                    if(color == Color.black)
+                    {
+                        noiseTex.SetPixel(x, y, color);
+                    }
+                }
             }
-        }
-
-        // Copy the pixel data to the texture and load it into the GPU.
+        // Apply the generated perlin to the texture
         noiseTex.Apply();
-
         return noiseTex;
     }
 
-    Color PaintPerlin(int x, int y, float perlinThreshold = 0.4f, float perlinScale = 10f)
+    Color PaintPerlin(int x, int y, float perlinThreshold, float perlinScale, Vector2? offset = null)
     {
-
-        //float offsetX = UnityEngine.Random.Range(0f, 1000f);
-        //float offsetY = UnityEngine.Random.Range(0f, 1000f);
-
-        float xCoord =  (float)x / pixWidth * perlinScale + 10200f;
-        float yCoord =  (float)y / pixHeight * perlinScale + 10200f;
+        float xCoord =  (float)x / pixWidth * perlinScale + (offset == null ? 0 : offset.Value.x);
+        float yCoord =  (float)y / pixHeight * perlinScale + (offset == null ? 0 : offset.Value.y);
 
         float sample = Mathf.PerlinNoise(xCoord, yCoord);
 
@@ -169,7 +409,6 @@ public class TerrainGeneration : MonoBehaviour
         }
         return Color.white;
     }
-
     Texture2D ThinLines(Texture2D texture)
     {
         Texture2D updatedTexture = texture;
@@ -180,29 +419,9 @@ public class TerrainGeneration : MonoBehaviour
             {
                 if (updatedTexture.GetPixel(width, height) == Color.black)
                 {
-                    int adjecent = 0;
-                    if (width + 1 <= texture.width)
-                    {
-                        if (updatedTexture.GetPixel(width + 1, height) == Color.black)
-                        {
-                            adjecent++;
-                        }
-                    }
-                    if (height - 1 > 0)
-                    {
-                        if (updatedTexture.GetPixel(width, height - 1) == Color.black)
-                        {
-                            adjecent++;
-                        }
-                    }
-                    if (height + 1 <= texture.height)
-                    {
-                        if (updatedTexture.GetPixel(width, height + 1) == Color.black)
-                        {
-                            adjecent++;
-                        }
-                    }
-                    if (adjecent >= 2)
+                    var allAdjecent = FindAllBlackNeighbors(new Vector2Int(width, height), texture, NeighbourType.Thinning);
+
+                    if (allAdjecent >= 2)
                     {
                         updatedTexture.SetPixel(width, height, Color.white);
                     }
@@ -212,10 +431,48 @@ public class TerrainGeneration : MonoBehaviour
         updatedTexture.Apply();
         return updatedTexture;
     }
-    
 
-    void Update()
+    private readonly Vector3Int[] thinningNeighbourPositions =
     {
-        
+        Vector3Int.up,
+        Vector3Int.right,
+        Vector3Int.down,
+        Vector3Int.left,
+        //Vector3Int.up + Vector3Int.right,
+        //Vector3Int.up + Vector3Int.left,
+        //Vector3Int.down + Vector3Int.right,
+        //Vector3Int.down + Vector3Int.left
+    };
+  
+    private readonly Vector3Int[] paddingNeighbourPositions =
+{
+        Vector3Int.up,
+        Vector3Int.right,
+        Vector3Int.down,
+        Vector3Int.left,
+        //Vector3Int.up + Vector3Int.right,
+        //Vector3Int.up + Vector3Int.left,
+        //Vector3Int.down + Vector3Int.right,
+        //Vector3Int.down + Vector3Int.left
+    };
+
+    public enum NeighbourType
+    {
+        Padding,
+        Thinning
     }
+    public int FindAllBlackNeighbors(Vector2Int gameOjectPosition, Texture2D texture, NeighbourType neighbourType)
+    {
+        int adjecentTiles = 0;
+
+        foreach (var position in neighbourType == NeighbourType.Thinning ? thinningNeighbourPositions : paddingNeighbourPositions)
+        {
+            if(texture.GetPixel(gameOjectPosition.x + position.x, gameOjectPosition.y + position.y) == Color.black)
+            {
+                adjecentTiles++;
+            }
+        }
+        return adjecentTiles;
+    }
+
 }
