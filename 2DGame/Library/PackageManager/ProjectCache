@@ -1,33 +1,33 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Alexa/Documents/AU/ComputerGameTechnologies/2DGame/Packages/manifest.json
+    m_FilePath: C:/Users/Phillip/Desktop/Skole/8.Semester/ComputerGameTechnologies/2DGame/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638313326895415803
-    m_Hash: 3600781732
+      ticks: 638367686064985305
+    m_Hash: 3764591207
   m_LockFileStatus:
-    m_FilePath: C:/Users/Alexa/Documents/AU/ComputerGameTechnologies/2DGame/Packages/packages-lock.json
+    m_FilePath: C:/Users/Phillip/Desktop/Skole/8.Semester/ComputerGameTechnologies/2DGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638313326895420850
-    m_Hash: 1486290803
+      ticks: 638367686188876058
+    m_Hash: 687246418
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/Alexa/Documents/AU/ComputerGameTechnologies/2DGame/Packages
-m_EditorVersion: 2023.1.9f1 (f3f94c8cdc49)
+m_ProjectPath: C:/Users/Phillip/Desktop/Skole/8.Semester/ComputerGameTechnologies/2DGame/Packages
+m_EditorVersion: 2023.1.19f1 (629111e352bc)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@2.0.7
+- packageId: com.unity.collab-proxy@2.2.0
   testable: 0
   isDirectDependency: 1
-  version: 2.0.7
+  version: 2.2.0
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.collab-proxy@2.0.7
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.collab-proxy@2.2.0
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -39,7 +39,7 @@ m_ResolvedPackages:
   type: assets
   description: The package gives you the ability to use Unity Version Control in
     the Unity editor. To use Unity Version Control, a subscription is required. Learn
-    more about how you can get started for free by visiting plasticscm.com.
+    more about how you can get started for free by visiting https://unity.com/solutions/version-control
   status: 0
   errors: []
   versions:
@@ -115,13 +115,8 @@ m_ResolvedPackages:
     - 2.1.0
     - 2.2.0
     compatible:
-    - 2.0.7
-    - 2.1.0-preview.3
-    - 2.1.0-preview.5
-    - 2.1.0-preview.6
-    - 2.1.0
     - 2.2.0
-    recommended: 2.0.7
+    recommended: 2.2.0
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -152,16 +147,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638264754080000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.0/manual/index.html
+  datePublishedTicks: 638326189440000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.2/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 13a0e74f47307a1b20a57747cea59891ce36a647
+    revision: 33c8fba1793946be3c73f738edf70db0b5546afd
     path: 
   unityLifecycle:
-    version: 2.0.7
+    version: 2.2.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -179,10 +174,11 @@ m_ResolvedPackages:
     Asset Store Plug-In:\n\n- Select the PlasticSCM folder in the Assets\\Plugins
     folder on the Project tab, then click Edit > Delete\n- Close the Unity Editor
     and open your project again. You will find the Plastic SCM menu item in the Window
-    menu.\n\nFixed:\n\n- Fixed the Unity Version Control icon disappearing from the
-    Editor Toolbar on domain reload.\n- Fixed the popup stating \"An existing checkout
-    operation has locked the workspace\" when trying to check in a scene with unsaved
-    changes."}'
+    menu.\n\n### Added\n\n- Added button for organization owner/admins to upgrade
+    to DevOps subscription.\n- Included new decorators for retained & locked files.\n\n###
+    Changed\n\n- Updated description in the package.json, including an updated link
+    to get started.\n\n### Fixed\n\n- Fixed failed operations when the workspace
+    is already locked."}'
   assetStore:
     productId: 
 - packageId: com.unity.feature.2d@2.0.0
@@ -190,7 +186,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.feature.2d@2.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.feature.2d@2.0.0
   assetPath: Packages/com.unity.feature.2d
   name: com.unity.feature.2d
   displayName: 2D
@@ -233,9 +229,9 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.2d.animation
-    version: 10.0.2
+    version: 10.0.3
   - name: com.unity.2d.common
-    version: 9.0.1
+    version: 9.0.2
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.mathematics
@@ -251,19 +247,19 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.7
+    version: 1.8.9
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
-    version: 1.3.7
+    version: 1.3.9
   - name: com.unity.ext.nunit
     version: 2.0.3
   - name: com.unity.2d.pixel-perfect
     version: 5.0.3
   - name: com.unity.2d.psdimporter
-    version: 9.0.0
+    version: 9.0.1
   - name: com.unity.2d.spriteshape
-    version: 10.0.1
+    version: 10.0.2
   - name: com.unity.modules.physics2d
     version: 1.0.0
   - name: com.unity.2d.tilemap
@@ -271,11 +267,11 @@ m_ResolvedPackages:
   - name: com.unity.modules.tilemap
     version: 1.0.0
   - name: com.unity.2d.tilemap.extras
-    version: 4.0.1
+    version: 4.0.2
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.2d.aseprite
-    version: 1.0.0
+    version: 1.0.1
   keywords: []
   registry:
     id: main
@@ -311,12 +307,12 @@ m_ResolvedPackages:
   upmReserved: '{"quickstart":"https://docs.unity3d.com/2021.2/Documentation/Manual/2DFeature.html"}'
   assetStore:
     productId: 
-- packageId: com.unity.ide.rider@3.0.24
+- packageId: com.unity.ide.rider@3.0.25
   testable: 0
   isDirectDependency: 1
-  version: 3.0.24
+  version: 3.0.25
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.ide.rider@3.0.24
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.ide.rider@3.0.25
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -374,7 +370,6 @@ m_ResolvedPackages:
     - 3.0.25
     - 3.0.26
     compatible:
-    - 3.0.24
     - 3.0.25
     - 3.0.26
     recommended: 3.0.26
@@ -398,16 +393,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638221653400000000
+  datePublishedTicks: 638300315270000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: f5decc642e3618ce1c6827d47318260e61d64714
+    revision: e103b4771a884e656407e1b7219e5e3c20222552
     path: 
   unityLifecycle:
-    version: 3.0.24
+    version: 3.0.25
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -417,16 +412,16 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"- fix [RIDER-91705](https://youtrack.jetbrains.com/issue/RIDER-91705).
-    Improve UnitTesting support\n - support JetBrains Toolbox App 2.0"}'
+  upmReserved: '{"changelog":"- unification of functionality to  search JetBrains
+    installations and open solution and file in Rider"}'
   assetStore:
     productId: 
-- packageId: com.unity.ide.visualstudio@2.0.18
+- packageId: com.unity.ide.visualstudio@2.0.21
   testable: 0
   isDirectDependency: 1
-  version: 2.0.18
+  version: 2.0.21
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.ide.visualstudio@2.0.18
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.ide.visualstudio@2.0.21
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -435,7 +430,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: assets
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -468,8 +463,6 @@ m_ResolvedPackages:
     - 2.0.21
     - 2.0.22
     compatible:
-    - 2.0.18
-    - 2.0.20
     - 2.0.21
     - 2.0.22
     recommended: 2.0.22
@@ -479,7 +472,7 @@ m_ResolvedPackages:
     version: 1.1.9
   resolvedDependencies:
   - name: com.unity.test-framework
-    version: 1.3.7
+    version: 1.3.9
   - name: com.unity.ext.nunit
     version: 2.0.3
   - name: com.unity.modules.imgui
@@ -499,16 +492,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638173205920000000
+  datePublishedTicks: 638300315250000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: 9d3c07127cbe1916b8abbfd18f71fb8d9df8008c
+    revision: eb2b500b99f6429d3d9dcb8acbcbd366dfbb42be
     path: 
   unityLifecycle:
-    version: 2.0.18
+    version: 2.0.21
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -518,17 +511,22 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"Integration:\n\n- Performance improvements with `EditorApplication.update`
-    callbacks.\n \nProject generation:\n\n- Add extra compiler options for analyzers
-    and source generators."}'
+  upmReserved: '{"changelog":"Integration:\n\n- Only disable the legacy `com.unity.ide.vscode`
+    package going forward.\n- Fix json parsing issues with specific non-UTF code
+    pages.\n\nProject generation:\n\n- Target `netstandard2.1` instead of `netstandard2.0`.\n-
+    Set `defaultSolution` in `settings.json`.\n- Remove `files.exclude` entries for
+    root `csproj` and `sln` files in `settings.json` when needed.\n- Add `vstuc`
+    launch configuration to `launch.json` when needed.\n- Add `visualstudiotoolsforunity.vstuc`
+    entry to `extensions.json` when needed.\n- You can prevent the package from patching
+    those configuration files by creating a `.vscode/.vstupatchdisable` file."}'
   assetStore:
     productId: 
-- packageId: com.unity.test-framework@1.3.7
+- packageId: com.unity.test-framework@1.3.9
   testable: 0
   isDirectDependency: 1
-  version: 1.3.7
+  version: 1.3.9
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.test-framework@1.3.7
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.test-framework@1.3.9
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -592,8 +590,6 @@ m_ResolvedPackages:
     - 2.0.1-pre.12
     - 2.0.1-pre.18
     compatible:
-    - 1.3.7
-    - 1.3.8
     - 1.3.9
     - 1.4.0
     - 2.0.1-exp.1
@@ -631,16 +627,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638221794830000000
+  datePublishedTicks: 638283169810000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/com.unity.test-framework.git
-    revision: 468e2ea5f976e8dee4bb02a4e9714155745c941e
+    revision: 5c8a1448cee4d7607be0d60dceb66703b0cfe016
     path: 
   unityLifecycle:
-    version: 1.3.7
+    version: 1.3.9
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -664,7 +660,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.6
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.textmeshpro@3.0.6
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.textmeshpro@3.0.6
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -853,7 +849,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.2
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.timeline@1.8.2
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.timeline@1.8.2
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1027,7 +1023,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.ugui@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.ugui@1.0.0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1106,7 +1102,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.0
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.visualscripting@1.8.0
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1212,7 +1208,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.ai@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.ai@1.0.0
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1275,7 +1271,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.androidjni@1.0.0
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1337,7 +1333,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.animation@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.animation@1.0.0
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1400,7 +1396,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -1463,7 +1459,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.audio@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.audio@1.0.0
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -1526,7 +1522,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.cloth@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.cloth@1.0.0
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -1593,7 +1589,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.director@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.director@1.0.0
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -1664,7 +1660,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -1727,7 +1723,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.imgui@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.imgui@1.0.0
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -1790,7 +1786,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -1853,7 +1849,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -1916,7 +1912,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.physics@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.physics@1.0.0
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -1979,7 +1975,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.physics2d@1.0.0
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2042,7 +2038,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.screencapture@1.0.0
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2109,7 +2105,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.terrain@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.terrain@1.0.0
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -2172,7 +2168,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -2243,7 +2239,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.tilemap@1.0.0
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -2309,7 +2305,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.ui@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.ui@1.0.0
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -2372,7 +2368,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.uielements@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.uielements@1.0.0
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -2447,7 +2443,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.umbra@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.umbra@1.0.0
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -2510,7 +2506,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -2581,7 +2577,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -2644,7 +2640,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -2715,7 +2711,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -2786,7 +2782,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -2857,7 +2853,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -2944,7 +2940,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.vehicles@1.0.0
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -3011,7 +3007,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.video@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.video@1.0.0
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -3086,7 +3082,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.vr@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.vr@1.0.0
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -3163,7 +3159,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.wind@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.wind@1.0.0
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -3226,7 +3222,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.xr@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.xr@1.0.0
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -3301,7 +3297,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.modules.subsystems@1.0.0
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -3368,7 +3364,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.3
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.ext.nunit@2.0.3
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.ext.nunit@2.0.3
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -3442,12 +3438,12 @@ m_ResolvedPackages:
     null exception when using EmptyConstraint with a null object"}'
   assetStore:
     productId: 
-- packageId: com.unity.2d.animation@10.0.2
+- packageId: com.unity.2d.animation@10.0.3
   testable: 0
   isDirectDependency: 0
-  version: 10.0.2
+  version: 10.0.3
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.animation@10.0.2
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.animation@10.0.3
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -3456,7 +3452,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: assets
   description: 2D Animation provides all the necessary tooling and runtime components
     for skeletal animation using Sprites.
   status: 0
@@ -3581,13 +3577,12 @@ m_ResolvedPackages:
     - 10.0.2
     - 10.0.3
     compatible:
-    - 10.0.2
     - 10.0.3
     recommended: 10.0.3
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
-    version: 9.0.1
+    version: 9.0.2
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.collections
@@ -3598,7 +3593,7 @@ m_ResolvedPackages:
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.2d.common
-    version: 9.0.1
+    version: 9.0.2
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.mathematics
@@ -3614,11 +3609,11 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.7
+    version: 1.8.9
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
-    version: 1.3.7
+    version: 1.3.9
   - name: com.unity.ext.nunit
     version: 2.0.3
   keywords:
@@ -3636,16 +3631,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638203589340000000
+  datePublishedTicks: 638294344950000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.animation@10.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 270d0a40ab5a83ae4137c829785b7aa1fb4083e1
+    revision: b0f3a8f8d95618bb6a299742c1bbd4e96699180b
     path: 
   unityLifecycle:
-    version: 10.0.2
+    version: 10.0.3
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -3655,14 +3650,13 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- Updated IK parameter names and comments
-    in public APIs. \n\n### Fixed\n- Fixed Sprite Resolver inspector not able to
-    set category to ''No Category'' if it contains the old hash value. (case DANB-396)\n-
-    Fixed an issue where the Limb IK solver will become unstable when the child bones
-    have different Z position. (case DANB-416)\n- Fixed an issue where the CCD and
-    Fabrik solvers will become unstable when the child bones have different Z position.
-    (case DANB-421)\n- Fixed an issue where changing Sprite Library reference in
-    the Inspector will result in an exception. (case DANB-429)"}'
+  upmReserved: '{"changelog":"### Fixed\n- Fixed an issue where the FK doesn''t blend
+    correctly with the IK if solver solves from the bind pose. (case DANB-484)\n-
+    Fixed an issue where GPU-deformed Sprites will not animated after scene reload.
+    (case DANB-461) \n- Added correct help documentation link to Sprite Library Asset.
+    (case DANB-487)\n\n##Changed\n- Updated documentation on enabling GPU skinning.\n-
+    Update the Sprite Library component inspector to inform users about the entry
+    overrides documentation page."}'
   assetStore:
     productId: 
 - packageId: com.unity.2d.pixel-perfect@5.0.3
@@ -3670,7 +3664,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 5.0.3
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3
   assetPath: Packages/com.unity.2d.pixel-perfect
   name: com.unity.2d.pixel-perfect
   displayName: 2D Pixel Perfect
@@ -3756,12 +3750,12 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-- packageId: com.unity.2d.psdimporter@9.0.0
+- packageId: com.unity.2d.psdimporter@9.0.1
   testable: 0
   isDirectDependency: 0
-  version: 9.0.0
+  version: 9.0.1
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.psdimporter@9.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.psdimporter@9.0.1
   assetPath: Packages/com.unity.2d.psdimporter
   name: com.unity.2d.psdimporter
   displayName: 2D PSD Importer
@@ -3770,7 +3764,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: assets
   description: A ScriptedImporter for importing Adobe Photoshop PSB (Photoshop Big)
     file format. The ScriptedImporter is currently targeted for users who wants to
     create multi Sprite character animation using Unity 2D Animation Package.
@@ -3851,18 +3845,17 @@ m_ResolvedPackages:
     - 9.0.0
     - 9.0.1
     compatible:
-    - 9.0.0
     - 9.0.1
     recommended: 9.0.1
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
-    version: 9.0.0
+    version: 9.0.2
   - name: com.unity.2d.sprite
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.2d.common
-    version: 9.0.1
+    version: 9.0.2
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.mathematics
@@ -3878,7 +3871,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.7
+    version: 1.8.9
   keywords:
   - 2d
   - psdimporter
@@ -3895,16 +3888,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638136938430000000
+  datePublishedTicks: 638294345010000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.psdimporter@9.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 921f93408bc912dafbc669a5d5ff55b7b04e7b3e
+    revision: b0f3a8f8d95618bb6a299742c1bbd4e96699180b
     path: 
   unityLifecycle:
-    version: 9.0.0
+    version: 9.0.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -3914,8 +3907,8 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- Fixed an issue where warning logs in the
-    console would get cut short due to invalid characters in layer names."}'
+  upmReserved: '{"changelog":"### Fixed\n- Fixed case where PSDImporter does not
+    support the PVRTC compression format for the iOS platform. (Case DANB-500)"}'
   assetStore:
     productId: 
 - packageId: com.unity.2d.sprite@1.0.0
@@ -3923,7 +3916,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.sprite@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.sprite@1.0.0
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -3984,12 +3977,12 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-- packageId: com.unity.2d.spriteshape@10.0.1
+- packageId: com.unity.2d.spriteshape@10.0.2
   testable: 0
   isDirectDependency: 0
-  version: 10.0.1
+  version: 10.0.2
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.spriteshape@10.0.1
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.spriteshape@10.0.2
   assetPath: Packages/com.unity.2d.spriteshape
   name: com.unity.2d.spriteshape
   displayName: 2D SpriteShape
@@ -3998,7 +3991,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: assets
   description: SpriteShape Runtime & Editor Package contains the tooling and the
     runtime component that allows you to create very organic looking spline based
     2D worlds. It comes with intuitive configurator and a highly performant renderer.
@@ -4089,7 +4082,6 @@ m_ResolvedPackages:
     - 10.0.1
     - 10.0.2
     compatible:
-    - 10.0.1
     - 10.0.2
     recommended: 10.0.2
     deprecated: []
@@ -4097,14 +4089,14 @@ m_ResolvedPackages:
   - name: com.unity.mathematics
     version: 1.1.0
   - name: com.unity.2d.common
-    version: 9.0.1
+    version: 9.0.2
   - name: com.unity.modules.physics2d
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.2d.common
-    version: 9.0.1
+    version: 9.0.2
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.modules.uielements
@@ -4118,7 +4110,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.7
+    version: 1.8.9
   - name: com.unity.modules.physics2d
     version: 1.0.0
   keywords:
@@ -4140,16 +4132,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638203589370000000
+  datePublishedTicks: 638294344970000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.spriteshape@10.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 270d0a40ab5a83ae4137c829785b7aa1fb4083e1
+    revision: b0f3a8f8d95618bb6a299742c1bbd4e96699180b
     path: 
   unityLifecycle:
-    version: 10.0.1
+    version: 10.0.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4159,11 +4151,8 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- UUM-29635 Fix case where SpriteShape point
-    overlay is displaying inconsistent number of digits after decimal point.\n- DANB-422
-    Fix case where Sprite Shape is not filled when \"Closed Sprite Shape\" is enabled
-    and \"Detail\" is set to \"High Quality\"\n- DANB-403 Fix case where Spriteshape
-    does not conform to edge sprites 9-slicing when first point is continuous."}'
+  upmReserved: '{"changelog":"### Fixed\n- UUM-41920 Fill tessellation doesn''t work
+    and Warnings logged for Closed 2D Shapes when C# Job is used"}'
   assetStore:
     productId: 
 - packageId: com.unity.2d.tilemap@1.0.0
@@ -4171,7 +4160,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.tilemap@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.tilemap@1.0.0
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -4247,12 +4236,12 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-- packageId: com.unity.2d.tilemap.extras@4.0.1
+- packageId: com.unity.2d.tilemap.extras@4.0.2
   testable: 0
   isDirectDependency: 0
-  version: 4.0.1
+  version: 4.0.2
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.tilemap.extras@4.0.1
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.tilemap.extras@4.0.2
   assetPath: Packages/com.unity.2d.tilemap.extras
   name: com.unity.2d.tilemap.extras
   displayName: 2D Tilemap Extras
@@ -4261,7 +4250,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: assets
   description: '2D Tilemap Extras is a package that contains extra scripts for use
     with 2D Tilemap features in Unity. These include custom Tiles and Brushes for
     the Tilemap feature.
@@ -4318,7 +4307,6 @@ m_ResolvedPackages:
     - 4.0.1
     - 4.0.2
     compatible:
-    - 4.0.1
     - 4.0.2
     recommended: 4.0.2
     deprecated: []
@@ -4362,16 +4350,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638203589380000000
+  datePublishedTicks: 638294344990000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@4.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/2d-extras.git
-    revision: 5c1725c663304c56eb3b1612a8dae90f4a0b9fa5
+    revision: 21a24803135ec4fbe47be9ccd27fb06e47d06d88
     path: 
   unityLifecycle:
-    version: 4.0.1
+    version: 4.0.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4381,17 +4369,16 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- [GameObjectBrush] Set HideFlags of instantiated
-    GameObject to HideFlags.None when painting\n- [GridInformation] Fix serialization
-    of GridInformationKey/Value"}'
+  upmReserved: '{"changelog":"### Fixed\n- [GameObjectBrush] Use cell offset to determine
+    location of GameObject when painting and erasing"}'
   assetStore:
     productId: 
-- packageId: com.unity.2d.aseprite@1.0.0
+- packageId: com.unity.2d.aseprite@1.0.1
   testable: 0
   isDirectDependency: 0
-  version: 1.0.0
+  version: 1.0.1
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.aseprite@1.0.0
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.aseprite@1.0.1
   assetPath: Packages/com.unity.2d.aseprite
   name: com.unity.2d.aseprite
   displayName: 2D Aseprite Importer
@@ -4400,7 +4387,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: assets
   description: 2D Aseprite Importer is a package which enables the import of .aseprite
     files from the Pixel Art tool Aseprite.
   status: 0
@@ -4413,9 +4400,10 @@ m_ResolvedPackages:
     - 1.0.0-pre.4
     - 1.0.0
     - 1.0.1
+    - 1.1.0
     compatible:
-    - 1.0.0
     - 1.0.1
+    - 1.1.0
     recommended: 1.0.1
     deprecated: []
   dependencies:
@@ -4431,7 +4419,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.2d.common
-    version: 9.0.1
+    version: 9.0.2
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.modules.uielements
@@ -4445,7 +4433,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.7
+    version: 1.8.9
   keywords:
   - 2d
   - Aseprite
@@ -4464,16 +4452,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638203510100000000
+  datePublishedTicks: 638285549780000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.aseprite@1.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/AsepriteImporter.git
-    revision: 419b070b489a77cf611d9d4ebff29eed4ef0bea7
+    revision: f35a0fd1f63d861882dcf1ab563fa2e23f8566ae
     path: 
   unityLifecycle:
-    version: 1.0.0
+    version: 1.0.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4483,19 +4471,16 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- Added a new event to the Aseprite Importer
-    which is fired at the last import process step.\n- Made the Aseprite file property
-    publicly available.\n- Made the Aseprite file parsing API publicly available.\n\n###
-    Fixed\n- Fixed an issue where the Animation Window would no longer detect Animation
-    Clips on a prefab. (DANB-458)"}'
+  upmReserved: '{"changelog":"### Changed\n- Fixed an issue where the background
+    importer would act on files that were not Aseprite files."}'
   assetStore:
     productId: 
-- packageId: com.unity.2d.common@9.0.1
+- packageId: com.unity.2d.common@9.0.2
   testable: 0
   isDirectDependency: 0
-  version: 9.0.1
+  version: 9.0.2
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.common@9.0.1
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.2d.common@9.0.2
   assetPath: Packages/com.unity.2d.common
   name: com.unity.2d.common
   displayName: 2D Common
@@ -4504,7 +4489,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: assets
   description: 2D Common is a package that contains shared functionalities that are
     used by most of the other 2D packages.
   status: 0
@@ -4562,7 +4547,6 @@ m_ResolvedPackages:
     - 9.0.1
     - 9.0.2
     compatible:
-    - 9.0.1
     - 9.0.2
     recommended: 9.0.2
     deprecated: []
@@ -4576,7 +4560,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.3
+    version: 1.8.4
   resolvedDependencies:
   - name: com.unity.2d.sprite
     version: 1.0.0
@@ -4593,7 +4577,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.7
+    version: 1.8.9
   keywords:
   - 2d
   registry:
@@ -4608,16 +4592,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638203589300000000
+  datePublishedTicks: 638294344900000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.common@9.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 270d0a40ab5a83ae4137c829785b7aa1fb4083e1
+    revision: b0f3a8f8d95618bb6a299742c1bbd4e96699180b
     path: 
   unityLifecycle:
-    version: 9.0.1
+    version: 9.0.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4627,7 +4611,9 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- Fixes for internal APIs."}'
+  upmReserved: '{"changelog":"### Added\n- Added Samples for SpriteAtlas.\n\n###
+    Fixed\n- Fixed case where PVRTC compression format for the iOS platform is not
+    supported. (Case DANB-500)\n\n(Case DANB-500)"}'
   assetStore:
     productId: 
 - packageId: com.unity.mathematics@1.2.6
@@ -4635,7 +4621,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.6
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.mathematics@1.2.6
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.mathematics@1.2.6
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -4717,7 +4703,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.4
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.collections@1.2.4
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.collections@1.2.4
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -4820,11 +4806,11 @@ m_ResolvedPackages:
     version: 1.1.31
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.7
+    version: 1.8.9
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.test-framework
-    version: 1.3.7
+    version: 1.3.9
   - name: com.unity.ext.nunit
     version: 2.0.3
   - name: com.unity.modules.imgui
@@ -4869,12 +4855,12 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-- packageId: com.unity.burst@1.8.7
+- packageId: com.unity.burst@1.8.9
   testable: 0
   isDirectDependency: 0
-  version: 1.8.7
+  version: 1.8.9
   source: 1
-  resolvedPath: C:\Users\Alexa\Documents\AU\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.burst@1.8.7
+  resolvedPath: C:\Users\Phillip\Desktop\Skole\8.Semester\ComputerGameTechnologies\2DGame\Library\PackageCache\com.unity.burst@1.8.9
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -5017,8 +5003,6 @@ m_ResolvedPackages:
     - 1.8.10
     - 1.8.11
     compatible:
-    - 1.8.7
-    - 1.8.8
     - 1.8.9
     - 1.8.10
     - 1.8.11
@@ -5043,16 +5027,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638221796120000000
+  datePublishedTicks: 638314141790000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: git@github.cds.internal.unity3d.com:unity/burst
-    revision: 47aa5e222ec0a9e94b78af0bb63021cf722ad06b
+    revision: 1aa8f2db606554f28aa01007e92600cd24643852
     path: 
   unityLifecycle:
-    version: 1.8.7
+    version: 1.8.9
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -5062,23 +5046,6 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- Add proper license attribution for MUSL
-    and SLEEF libraries.\n\n### Removed\n\n### Changed\n- Changed focus for initial
-    Burst Inspector focus to actually get the search hit in focus.\n\n### Fixed\n-
-    Fix QNX builds using the qnxInstallationPath editor build setting\n- Fixed an
-    issue causing source file handles to be left open (preventing saving in an ide,
-    if in debug scripting mode and the file is used in the burst path).\n- Fixed
-    an issue when targeting multiple cpu architectures (e.g. SSE2 & AVX2) that under
-    some circumstances would lead to code attempting to execute paths not designed
-    for that cpu.\n- Fixed an issue that caused builds to fail due to the System.Diagnostics.Tracing
-    assembly not being found\n- Fixed a warning that occurred when opening Burst
-    AOT Settings while in Play Mode\n- Fixed a hashing error that could occur when
-    an operator overload method is used as a Burst entry point\n- Fixed crash on
-    linux if debug logging was enabled.\n- Fixed \"The specified path is not of a
-    legal form (empty)\" error\n- Calls to methods with multiple `[Conditional]`
-    attributes are now kept if any one of the conditions are met\n- Fixed Burst implementation
-    of `IntPtr.GetHashCode()` being different than .Net\n- Fixed an issue that caused
-    the digits and MidpointRounding parameters of Math.Round be ignored\n\n### Known
-    Issues"}'
+  upmReserved: '{"changelog":"### Fixed\n\n### Added\n\n### Removed\n\n### Changed"}'
   assetStore:
     productId: 
