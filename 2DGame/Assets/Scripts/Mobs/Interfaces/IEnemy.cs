@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.AI
 {
@@ -10,22 +11,10 @@ namespace Assets.Scripts.AI
     {
         void Start();
         void FixedUpdate();
+        void MoveTowardsTarget(Transform target);
         void Attack();
         void TakeDamage(int damage);
         void DropLoot();
         void Die();
-        void setCurrentState(EnemyState state);
-        EnemyState getCurrentState();
-    }
-
-    public enum EnemyState
-    {
-        Idle,
-        MovingTowardsPlayer,
-        MovingAwayFromPlayer,
-        ChasingPlayer,
-        Attacking,
-        TakingDamage,
-        Dying
     }
 }

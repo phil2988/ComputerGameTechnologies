@@ -392,6 +392,8 @@
 "Assets/Scripts/Mobs/Interfaces/IProjectile.cs"
 "Assets/Scripts/Mobs/SkeletonEnemy.cs"
 "Assets/Scripts/Mobs/SkeletonProjectile.cs"
+"Assets/Scripts/Mobs/SlimeEnemy.cs"
+"Assets/Scripts/Mobs/StoneGolemBoss.cs"
 "Assets/Scripts/Mobs/ZombieEnemy.cs"
 "Assets/Scripts/perlinNoiseTexture.cs"
 "Assets/Scripts/TerrainGeneration.cs"

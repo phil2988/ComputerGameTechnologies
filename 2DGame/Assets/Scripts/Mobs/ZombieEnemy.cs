@@ -28,27 +28,21 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
     private Animator _animator;
     private Rigidbody2D _rigidbody;
 
-    EnemyState _currentState = EnemyState.Idle;
-
     public void Start()
     {
         setTarget(GameObject.FindGameObjectWithTag("Player").transform);
-        setAnimator(GetComponent<Animator>());
-        setRigidBody(GetComponent<Rigidbody2D>());
     }
 
     public void FixedUpdate()
     {
+        _animator.SetTrigger("IdleTrigger");
         float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
 
         if (distanceToPlayer < detectionRadius)
         {
-            _currentState = EnemyState.ChasingPlayer;
-
             if (distanceToPlayer > attackRange)
             {
-                // Chase player
-                transform.position = Vector2.MoveTowards(transform.position, _target.position, movementSpeed * Time.deltaTime);
+                MoveTowardsTarget(_target);
             }
             else
             {
@@ -57,13 +51,20 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
         }
     }
 
+    public void MoveTowardsTarget(Transform target)
+    {
+        _animator.SetTrigger("WalkTrigger");
+        transform.position = Vector2.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+    }
+
     public void Attack()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
 
         if (distanceToPlayer <= attackRange)
         {
-            _currentState = EnemyState.Attacking;
+            // Play attack animation
+            _animator.SetTrigger("AttackTrigger");
 
             /*
              * Need a script attached to player containing the below stats for calculation to work:
@@ -96,7 +97,6 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
 
     public void TakeDamage(int damage)
     {
-        _currentState = EnemyState.TakingDamage;
         health -= damage;
 
         if (health <= 0)
@@ -109,8 +109,7 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
     {
         if(_animator != null)
         {
-            setCurrentState(EnemyState.Dying);
-            _animator.SetTrigger("Die");
+            _animator.SetTrigger("DieTrigger");
             DropLoot();
             Destroy(gameObject);
         }
@@ -139,13 +138,5 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
     {
         this._rigidbody = rigidbody;
         return this;
-    }
-    public void setCurrentState(EnemyState enemyState)
-    {
-        this._currentState = enemyState;
-    }
-    public EnemyState getCurrentState()
-    {
-        return _currentState;
     }
 }

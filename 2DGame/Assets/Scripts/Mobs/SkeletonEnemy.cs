@@ -14,52 +14,75 @@ public class SkeletonEnemy : MonoBehaviour, IEnemy
     private float health;
     private float movementSpeed;
     private float detectionRadius;
-
     private float minimumDistance;
 
     // Attack
     public float damage;
     public float attackRange;
     public float attackSpeed;
-    private float nextShotTime;
+    public float nextShotTime;
     public GameObject projectile;
 
     // Loot
     public GameObject lootPrefab;
     public int lootDropChance;
+    
 
-    private Transform _player;
-    private Animator _animator;
-    private Rigidbody2D _rigidbody;
-
-    EnemyState _currentState = EnemyState.Idle;
+    public Transform _target;
+    public Animator _animator;
+    public Rigidbody2D _rigidbody;
 
     public void Start()
     {
         setTarget(GameObject.FindGameObjectWithTag("Player").transform);
-        setAnimator(GetComponent<Animator>());
-        setRigidBody(GetComponent<Rigidbody2D>());
     }
 
     public void FixedUpdate()
     {
-        if(Time.time > nextShotTime)
+        // If next attack is ready and player is within attack range
+        if(Time.time > nextShotTime && Vector2.Distance(transform.position, _target.position) < attackRange)
         {
-            setCurrentState(EnemyState.Attacking);
             Instantiate(projectile, transform.position, Quaternion.identity);
             nextShotTime = Time.time + attackSpeed;
         }
 
-        MoveAwayFromPlayer();
+        MoveAwayFromTarget();
+    }
+
+    public void MoveTowardsTarget(Transform target)
+    {
+        transform.position = Vector2.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+        _animator.SetTrigger("WalkTrigger");
+    }
+
+    // Add movement animations depending on which way the skeleton moves - This depends in where the player is related to this object
+    void MoveAwayFromTarget()
+    {
+        if (_target != null)
+        {
+            if (Vector2.Distance(transform.position, _target.position) < minimumDistance)
+            {
+                _animator.SetTrigger("WalkTrigger");
+                Vector2 direction = (transform.position - _target.position).normalized;
+                _rigidbody.AddForce(direction * (movementSpeed * Time.deltaTime));
+            }
+            else
+            {
+                _animator.SetTrigger("WalkTrigger");
+                _rigidbody.velocity = Vector2.zero;
+            }
+        }
     }
 
     public void Attack()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, _player.position);
-
-        if (distanceToPlayer <= attackRange)
+        // If next attack is ready and player is within attack range
+        if (Time.time > nextShotTime && Vector2.Distance(transform.position, _target.position) < attackRange)
         {
-            setCurrentState(EnemyState.Attacking);
+            // Play an attack animation
+            _animator.SetTrigger("AttackTrigger");
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            nextShotTime = Time.time + attackSpeed;
 
             /*
              * Need a script attached to player containing the below stats for calculation to work:
@@ -77,7 +100,6 @@ public class SkeletonEnemy : MonoBehaviour, IEnemy
 
     public void TakeDamage(int damage)
     {
-        setCurrentState(EnemyState.TakingDamage);
         health -= damage;
 
         if (health <= 0)
@@ -98,36 +120,16 @@ public class SkeletonEnemy : MonoBehaviour, IEnemy
     {
         if(_animator != null)
         {
-            setCurrentState(EnemyState.Dying);
             _animator.SetTrigger("Die");
             DropLoot();
             Destroy(gameObject);
         }
     }
 
-    // Add movement animations depending on which way the skeleton moves - This depends in where the player is related to this object
-    void MoveAwayFromPlayer()
-    {
-        if (_player != null)
-        {
-            if (Vector2.Distance(transform.position, _player.position) < minimumDistance)
-            {
-                setCurrentState(EnemyState.MovingAwayFromPlayer);
-                Vector2 direction = (transform.position - _player.position).normalized;
-                _rigidbody.AddForce(direction * (movementSpeed * Time.deltaTime));
-            }
-            else
-            {
-                setCurrentState(EnemyState.Idle);
-                _rigidbody.velocity = Vector2.zero;
-            }
-        }
-    }
-
     // Setters
     public SkeletonEnemy setTarget(Transform target)
     {
-        this._player = target;
+        this._target = target;
         return this;
     }
 
@@ -141,15 +143,5 @@ public class SkeletonEnemy : MonoBehaviour, IEnemy
     {
         this._rigidbody = rigidbody;
         return this;
-    }
-
-    public void setCurrentState(EnemyState enemyState)
-    {
-        this._currentState = enemyState;
-    }
-
-    public EnemyState getCurrentState()
-    {
-        return _currentState;
     }
 }
