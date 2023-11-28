@@ -458,10 +458,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grassTiles: []
-  mainPathTiles: []
-  pathTiles: []
-  grassTilemap: {fileID: 148772838}
+  fullPathTiles: []
+  partialPathTiles: []
+  terrainTileMap: {fileID: 148772838}
   voidTile: {fileID: 0}
+  testTile: {fileID: 0}
 --- !u!4 &907481853
 Transform:
   m_ObjectHideFlags: 0

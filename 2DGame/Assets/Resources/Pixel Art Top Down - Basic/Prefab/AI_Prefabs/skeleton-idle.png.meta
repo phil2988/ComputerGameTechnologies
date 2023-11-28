@@ -248,7 +248,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton-idle_0: -6416645517455541249
+      skeleton-idle_1: 3727261204410916548
+      skeleton-idle_2: -2152684077923257122
+      skeleton-idle_3: 4944351648152529930
+      skeleton-idle_4: -8704670590310787622
+      skeleton-idle_5: -514433581687967581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
