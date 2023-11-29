@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -25,10 +26,11 @@ public class StoryScript : MonoBehaviour
 
         // Read entire text file content in one string
         string text = File.ReadAllText(textFile);
-        Debug.Log(text);
         _messageArray = text.Split("<next>");
-        _messageCounter = _messageArray.Length;
         button.onClick.AddListener(OnClickFunction);
+        string message = _messageArray[0];
+        Debug.Log(message);
+        _textWriterSingle = TextWriter.AddWriter_Static(storyText, message, .05f, true, true);
     }
 
     private void OnClickFunction()
@@ -37,24 +39,49 @@ public class StoryScript : MonoBehaviour
         {
             //Currently active TextWriter
             _textWriterSingle.WriteAllAndDestroy();
-        }
-        if (_textWriterSingle != null && _messageCounter > _messageArray.Length)
+        } else 
+        if (_textWriterSingle != null && _messageCounter >= _messageArray.Length)
         {
-            string message = "End of Story";
-            _textWriterSingle = TextWriter.AddWriter_Static(storyText, message, .05f, true, true);
+            //string message = "End of Story";
+            //_textWriterSingle = TextWriter.AddWriter_Static(storyText, message, .05f, true, true);
+            //SceneManager.LoadSceneAsync(2);
+            LoadScene(2);
+
         }
         else
         {
             Debug.Log(_messageArray.Length);
+            Debug.Log(_messageCounter);
             string message = _messageArray[_messageCounter];
             Debug.Log(message);
             _textWriterSingle = TextWriter.AddWriter_Static(storyText, message, .05f, true, true);
             _messageCounter++;
         }
     }
+    
+    public GameObject LoadingScreen;
+    public Image LoadingBarFill;
 
-    private void Start()
+    public void LoadScene(int sceneId)
     {
-        //TextWriter.AddWriter_Static(storyText, "Hello World!", .1f, true);
+        StartCoroutine(LoadSceneAsync(sceneId));
+    }
+
+    IEnumerator LoadSceneAsync(int sceneId)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneId);
+        
+        LoadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            Debug.Log(operation.progress);
+            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+            Debug.Log(progressValue);
+
+            LoadingBarFill.fillAmount = progressValue;
+
+            yield return null;
+        }
     }
 }
