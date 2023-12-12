@@ -27,7 +27,7 @@ public class SkeletonProjectile : MonoBehaviour, IProjectile
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, projectileSpeed * Time.deltaTime);
 
-        if (transform.position == targetPosition) // TODO: Use RigidBody to cause collision instead?
+        if (transform.position == targetPosition)
         {
             Destroy(gameObject);
         }
