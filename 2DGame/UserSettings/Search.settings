@@ -8,6 +8,11 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+	"picker_window_position_offset.0B486DF2" = "10;57;320;550"
+	"picker_search_text.0B486DF2" = "image"
+	"last_search.0B486DF2" = "image"
+	"OpenInspectorPreview.0B486DF2" = "0"
+	"currentGroup.0B486DF2" = null
 }
 providers = {
 	asset = {
@@ -64,8 +69,12 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	""
+	"CustomHorizo"
+	"Custom"
 ]
 searchItemFavorites = [
+	"GlobalObjectId_V1-3-b2ac3628adcc7c642b6898e6499b36d7-2655988077585873504-0"
 ]
 savedSearchesSortOrder = 0
 showSavedSearchPanel = false
