@@ -18,7 +18,6 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
     public float damage;
     public float attackRange;
     public float attackSpeed;
-    public float nextChargeTime;
     public float chargeSpeed;
 
     public GameObject lootPrefab;
@@ -37,7 +36,6 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
     {
         _animator.SetTrigger("IdleTrigger");
         float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
-
         if (distanceToPlayer < detectionRadius)
         {
             if (distanceToPlayer > attackRange)
@@ -57,6 +55,12 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
         transform.position = Vector2.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
     }
 
+    public void ChargeTowardsTarget(Transform target)
+    {
+        _animator.SetTrigger("WalkTrigger");
+        transform.position = Vector2.MoveTowards(transform.position, target.position, chargeSpeed *Time.deltaTime);
+    }
+
     public void Attack()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
@@ -67,32 +71,11 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
             _animator.SetTrigger("AttackTrigger");
 
             /*
-             * Need a script attached to player containing the below stats for calculation to work:
-             * 
-             * Armor calculation
-            int playerArmor = player.GetComponent<PlayerStats>().armor;
-            float damageReductionPercentage = 0.2f
-            int finalDamage =  Mathf.Max(0, Mathf.RoundToInt(baseDamage - (playerArmor * damageReductionPercentage)));
-
             * Deal damage to player
             player.GetComponent<Health>.TakeDamage(finalDamage);
             */
         }
 
-    }
-
-    void ChargeAttack()
-    {
-        if (Time.time > nextChargeTime)
-        {
-            // Like this for animation?
-            /*animator.SetBool("isWalking", false);
-            animator.SetTrigger("Charge");*/
-
-            transform.position = Vector2.MoveTowards(transform.position, _target.position, chargeSpeed * Time.deltaTime);
-
-            nextChargeTime = Time.time + attackSpeed;
-        }
     }
 
     public void TakeDamage(int damage)
