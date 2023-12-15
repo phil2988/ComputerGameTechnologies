@@ -4,9 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - GameBackgroundMusic
-  - Loot
-  - Particle
   - Terrain
   layers:
   - Default
@@ -46,17 +43,14 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Layer 1
-    uniqueID: 4082992491
+    uniqueID: 2981748697
     locked: 0
   - name: Layer 2
-    uniqueID: 3770641579
+    uniqueID: 270782553
     locked: 0
   - name: Layer 3
-    uniqueID: 443678507
+    uniqueID: 765177387
     locked: 0
   - name: Layer 4
-    uniqueID: 2463132875
-    locked: 0
-  - name: Layer 5
-    uniqueID: 1246043505
+    uniqueID: 2219744575
     locked: 0
