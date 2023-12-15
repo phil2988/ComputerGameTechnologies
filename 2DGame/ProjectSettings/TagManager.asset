@@ -7,6 +7,7 @@ TagManager:
   - GameBackgroundMusic
   - Loot
   - Particle
+  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Layer 1
+    uniqueID: 4082992491
+    locked: 0
+  - name: Layer 2
+    uniqueID: 3770641579
+    locked: 0
+  - name: Layer 3
+    uniqueID: 443678507
+    locked: 0
+  - name: Layer 4
+    uniqueID: 2463132875
+    locked: 0
+  - name: Layer 5
+    uniqueID: 1246043505
     locked: 0
