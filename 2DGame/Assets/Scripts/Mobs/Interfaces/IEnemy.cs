@@ -14,7 +14,7 @@ namespace Assets.Scripts.AI
         void MoveTowardsTarget(Transform target);
         void Attack();
         void TakeDamage(int damage);
-        void DropLoot();
+        //void DropLoot();
         void Die();
     }
 }
