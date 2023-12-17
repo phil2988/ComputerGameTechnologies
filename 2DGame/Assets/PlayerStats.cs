@@ -14,6 +14,12 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int minArmor;
     [SerializeField] private int currArmor;
 
+    [SerializeField] public Transform respawnPoint;
+    [SerializeField] public GameObject player;
+
+    [SerializeField] public GameObject gameOver;
+    public PlayerMovement playerMovement;
+
     public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
@@ -35,23 +41,11 @@ public class PlayerStats : MonoBehaviour
     {
 
         SetPlayerHealth(GetPlayerHealth() - damageAmount);
-        /*
-        if (damageAmount == currArmor)
+
+        if (GetPlayerHealth() <= minHealth )
         {
-            SetPlayerArmor(0);
-        }
-        else if (damageAmount < currArmor)
-        {
-            SetPlayerArmor(Math.Abs(damageAmount - currArmor));
-        }
-        else if (damageAmount > currArmor)
-        {
-            SetPlayerHealth(Math.Abs(currArmor - damageAmount));
-        }
-        */
-        if (GetPlayerHealth() < minHealth )
-        {
-            Console.WriteLine("Gameover");
+            playerMovement.gameOver = true;
+            gameOver.SetActive(true);
         }
     }
 
@@ -75,5 +69,13 @@ public class PlayerStats : MonoBehaviour
     {
         currHealth = health;
         healthBar.SetHealth(currHealth);
+    }
+
+    public void respawnPlayer()
+    {
+        gameOver.SetActive(false);
+        player.transform.position = respawnPoint.position;
+        SetPlayerHealth(maxHealth);
+        playerMovement.gameOver = false;
     }
 }
