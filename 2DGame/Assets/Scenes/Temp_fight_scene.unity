@@ -1026,7 +1026,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1700573359239331288, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1700573359239331288, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1081,9 +1081,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
       propertyPath: _target
       value: 
       objectReference: {fileID: 1050966466}
+    - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
+      propertyPath: movementSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
+      propertyPath: detectionRadius
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8488131666902381145, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
       propertyPath: m_Name
       value: Zombie
