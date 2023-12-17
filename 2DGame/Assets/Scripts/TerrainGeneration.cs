@@ -35,6 +35,8 @@ public class TerrainGeneration : MonoBehaviour
     public Tile voidTile;
     public Tile testTile;
 
+    public List<GameObject> mobPool = new();
+
     // Width and height of the texture in pixels.
     readonly int pixWidth = 500;
     readonly int pixHeight = 500;
@@ -77,10 +79,10 @@ public class TerrainGeneration : MonoBehaviour
         terrainTexture.Apply();
         Debug.Log("Done!");
 
-        //Debug.Log("Generating path padding section of texture...");
-        //GeneratePointsOfInterest();
-        //terrainTexture.Apply();
-        //Debug.Log("Done!");
+        Debug.Log("Generating path padding section of texture...");
+        GeneratePointsOfInterest();
+        terrainTexture.Apply();
+        Debug.Log("Done!");
 
         Debug.Log("Generating grass padding of paths...");
         GenerateGrassPadding();
@@ -270,19 +272,19 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                //if(terrainTexture.GetPixel(x, y) == Color.black)
-                //{
+                if(terrainTexture.GetPixel(x, y) == TileColors.Where((tile) => tile.Key == TileTypes.PathFull).Single().Value)
+                {
                     var rand = UnityEngine.Random.Range(0, likelyhood);
 
-                    if(rand == 1)
+                    if (rand == 1)
                     {
-                        terrainTexture.SetPixel(
-                            x,
-                            y,
-                            TileColors.Where((tile) => tile.Key == TileTypes.Test).Single().Value
-                        );
+                        // Choose a random mob to spawn
+                        var mob = mobPool[UnityEngine.Random.Range(0, mobPool.Count)];
+
+                        // Spawn the mob at the position
+                        Instantiate(mob, new Vector3(x + startPos.x, y + startPos.y, 0), Quaternion.identity);
                     }
-                //}
+                }
             }
         }
     }

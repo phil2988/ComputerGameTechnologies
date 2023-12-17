@@ -30,7 +30,9 @@ public class ZombieEnemy : MonoBehaviour
         distanceToPlayer = Vector2.Distance(transform.position, _target.transform.position);
         Vector2 direction = (_target.transform.position - transform.position);
         direction.Normalize();
-        transform.position = Vector2.MoveTowards(this.transform.position, _target.transform.position, movementSpeed * Time.deltaTime);
+
+        _rigidbody.velocity = direction * movementSpeed;
+        //transform.position = Vector2.MoveTowards(this.transform.position, _target.transform.position, movementSpeed * Time.deltaTime);
         //if (distanceToPlayer < detectionRadius)
         //{
         //    if (distanceToPlayer > attackRange)
