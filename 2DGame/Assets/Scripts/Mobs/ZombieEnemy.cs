@@ -1,115 +1,124 @@
 using Assets.Scripts.AI;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
-/* The Zombie is a melee enemy
- * Charges at the player at high speed, dealing damage at collision
- * Or just runs towards the player
- */
-
-public class ZombieEnemy : MonoBehaviour, IEnemy
+public class ZombieEnemy : MonoBehaviour
 {
     public int health;
     public float movementSpeed;
     public float detectionRadius;
-
-    // Attack
+    float distanceToPlayer;
     public float damage;
     public float attackRange;
-    public float attackSpeed;
-    public float chargeSpeed;
 
-    //public GameObject lootPrefab;
-    //public int lootDropChange;
-
-    Vector2 movement;
+    bool isMoving = false;
+    bool isCharging = false;
 
     public Transform _target;
     public Animator _animator;
     public Rigidbody2D _rigidbody;
 
-
-    public void Start()
+    void Start()
     {
         Debug.Log("Starting");
         setTarget(GameObject.FindGameObjectWithTag("Player").transform);
     }
 
-    public void FixedUpdate()
+    void Update()
     {
-        // _animator.SetTrigger("IdleTrigger");
-        float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
-        if (distanceToPlayer < detectionRadius)
-        {
-            
-            if (distanceToPlayer > attackRange)
-            {
-                MoveTowardsTarget(_target);
-                
-            }
-            else
-            {
-                Attack();
-                Debug.Log("Attacking");
-            }
-        }
-    }
-
-    public void MoveTowardsTarget(Transform target)
-    {
-        Vector2 direction = _target.position - transform.position;
+        distanceToPlayer = Vector2.Distance(transform.position, _target.transform.position);
+        Vector2 direction = (_target.transform.position - transform.position);
         direction.Normalize();
-
-        _animator.SetTrigger("WalkTrigger");
-        // transform.localPosition = Vector2.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
-        //transform.localPosition = _rigidbody.MovePosition(_rigidbody.position + movement.normalized * movementSpeed * Time.fixedDeltaTime);
-        _rigidbody.velocity = direction * movementSpeed;
-        Debug.Log("Did it work?");
-        
+        transform.position = Vector2.MoveTowards(this.transform.position, _target.transform.position, movementSpeed * Time.deltaTime);
+        //if (distanceToPlayer < detectionRadius)
+        //{
+        //    if (distanceToPlayer > attackRange)
+        //    {
+        //        MoveTowardsTarget(_target);
+        //    }
+        //    else
+        //    {
+        //        ChargeAttack();
+        //    }
+        //}
+        //else
+        //{
+        //    StopMoving();
+        //}
     }
 
-    public void ChargeTowardsTarget(Transform target)
+    void MoveTowardsTarget(Transform target)
     {
-        _animator.SetTrigger("WalkTrigger");
-        transform.position = Vector2.MoveTowards(transform.position, target.position, chargeSpeed *Time.deltaTime);
-    }
-
-    public void Attack()
-    {
-        float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
-
-        if (distanceToPlayer <= attackRange)
+        if (!isMoving)
         {
-            // Play attack animation
-            _animator.SetTrigger("AttackTrigger");
-
-            /*
-            * Deal damage to player
-            player.GetComponent<Health>.TakeDamage(finalDamage);
-            */
+            transform.position = Vector2.MoveTowards(this.transform.position, target.transform.position, movementSpeed * Time.deltaTime);
+            _animator.SetTrigger("WalkTrigger");
+            isMoving = true;
+            Debug.Log("Walking towards target" + _rigidbody.velocity);
         }
-
     }
 
-    public void TakeDamage(int damage)
+    void StopMoving()
+    {
+        if (isMoving)
+        {
+            _rigidbody.velocity = Vector2.zero;
+            _animator.SetTrigger("IdleTrigger");
+            Debug.Log("Zombie is idle");
+            isMoving = false;
+        }
+    }
+
+    void ChargeAttack()
+    {
+        Debug.Log("ChargeAttack");
+        if (!isCharging)
+        {
+            StartCoroutine(ChargeAttackCoroutine());
+        }
+    }
+
+    IEnumerator ChargeAttackCoroutine()
+    {
+        Debug.Log("ChargeAttackCoroutine");
+        isCharging = true;
+
+        _animator.SetTrigger("AttackTrigger");
+        yield return new WaitForSeconds(1f);
+
+        Vector2 direction = (_target.position - transform.position).normalized;
+        _rigidbody.velocity = direction * (movementSpeed * 2f);
+
+        yield return new WaitForSeconds(0.5f);
+
+        _rigidbody.velocity = Vector2.zero;
+
+        _animator.Play("zombie_idle");
+
+        yield return new WaitForSeconds(0.5f);
+
+        isCharging = false;
+    }
+
+    void Attack()
+    {
+        Debug.Log("Zombie is attacking");
+        _animator.SetTrigger("AttackTrigger");
+
+        /*
+        * Deal damage to player
+        player.GetComponent<Health>.TakeDamage(finalDamage);
+        */
+    }
+
+    void TakeDamage(int damage)
     {
         health -= damage;
 
         if (health <= 0)
         {
             Die();
-        }
-    }
-
-    public void Die()
-    {
-        if(_animator != null)
-        {
-            _animator.SetTrigger("DieTrigger");
-            //DropLoot();
-            Destroy(gameObject);
         }
     }
 
@@ -121,17 +130,28 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
     //    }
     //}
 
-    // Setters
+    void Die()
+    {
+        if (_animator != null)
+        {
+            _animator.SetTrigger("DieTrigger");
+            //DropLoot();
+            Destroy(gameObject);
+        }
+    }
+
     public ZombieEnemy setTarget(Transform target)
     {
         this._target = target;
         return this;
     }
+
     public ZombieEnemy setAnimator(Animator animator)
     {
         this._animator = animator;
         return this;
     }
+
     public ZombieEnemy setRigidBody(Rigidbody2D rigidbody)
     {
         this._rigidbody = rigidbody;
