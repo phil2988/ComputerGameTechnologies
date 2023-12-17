@@ -22,10 +22,12 @@ public class StoryScript : MonoBehaviour
 
     private void Awake()
     {
-        string textFile = "Assets/Scripts/Story/Story.txt";
-
+        //string textFile = "Assets/Resources/Story/Story.txt";
+        TextAsset textFileRosource = Resources.Load<TextAsset>("Story/Story");
+        
         // Read entire text file content in one string
-        string text = File.ReadAllText(textFile);
+        //string text = File.ReadAllText(textFile);
+        string text = textFileRosource.text;
         _messageArray = text.Split("<next>");
         button.onClick.AddListener(OnClickFunction);
         string message = _messageArray[0];
