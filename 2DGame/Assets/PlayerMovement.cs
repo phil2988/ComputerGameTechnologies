@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+    public bool gameOver;
 
     Vector2 movement;
 
@@ -21,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (gameOver == true)
+        {
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
