@@ -1,15 +1,10 @@
 using Assets.Scripts.AI;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-/* The Zombie is a melee enemy
- * Charges at the player at high speed, dealing damage at collision
- * Or just runs towards the player
- */
 
 public class ZombieEnemy : MonoBehaviour, IEnemy
 {
+<<<<<<< Updated upstream
     public int health;
     public float movementSpeed;
     private float detectionRadius;
@@ -26,56 +21,135 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
     public Transform _target;
     private Animator _animator;
     private Rigidbody2D _rigidbody;
+=======
+    public float health = 100;
+    public float movementSpeed = 1;
+    public float detectionRadius = 5;
+    public float distanceToPlayer;
+    public float damage = 10;
+    public float attackRange = 3;
+
+    //public GameObject lootPrefab;
+    //public int lootDropChange;
+
+    bool isIdle = true;
+    bool isCharging = false;
+
+    public Transform _target;
+    public Animator _animator;
+    public Rigidbody2D _rigidbody;
+>>>>>>> Stashed changes
 
     public void Start()
     {
         setTarget(GameObject.FindGameObjectWithTag("Player").transform);
-    }
+    } 
 
     public void FixedUpdate()
     {
+<<<<<<< Updated upstream
         _animator.SetTrigger("IdleTrigger");
         float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
         if (distanceToPlayer < detectionRadius)
         {
             if (distanceToPlayer > attackRange)
+=======
+        distanceToPlayer = Vector2.Distance(transform.position, _target.position);
+        // Debug.Log("Distance to Player: " + distanceToPlayer);
+        if (distanceToPlayer < detectionRadius)
+        {
+            Debug.Log("Player detected");
+            while (distanceToPlayer > attackRange)
+>>>>>>> Stashed changes
             {
                 MoveTowardsTarget(_target);
             }
-            else
+            
+            if(attackRange > distanceToPlayer)
             {
+<<<<<<< Updated upstream
                 Attack();
+=======
+                StartCoroutine(ChargeAttackCoroutine());
+>>>>>>> Stashed changes
             }
+        }
+        else
+        {
+            StopMoving();
         }
     }
 
     public void MoveTowardsTarget(Transform target)
     {
+<<<<<<< Updated upstream
         _animator.SetTrigger("WalkTrigger");
         transform.position = Vector2.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+=======
+        Vector2 direction = (target.position - transform.position).normalized;
+        _rigidbody.velocity = direction * movementSpeed;
+
+        if (isIdle)
+        {
+            _animator.SetTrigger("WalkTrigger");
+            isIdle = false;
+        }
+
+        Debug.Log("Walking towards target");
+>>>>>>> Stashed changes
     }
 
-    public void ChargeTowardsTarget(Transform target)
+    private void StopMoving()
     {
-        _animator.SetTrigger("WalkTrigger");
-        transform.position = Vector2.MoveTowards(transform.position, target.position, chargeSpeed *Time.deltaTime);
+        if (!isIdle)
+        {
+            _rigidbody.velocity = Vector2.zero;
+            _animator.SetTrigger("IdleTrigger");
+            Debug.Log("Zombie is idle");
+            isIdle = true;
+        }
+    }
+
+    public void ChargeAttack()
+    {
+        Debug.Log("ChargeAttack");
+        if (!isCharging)
+        {
+            StartCoroutine(ChargeAttackCoroutine());
+        }
+    }
+
+    IEnumerator ChargeAttackCoroutine()
+    {
+        Debug.Log("ChargeAttackCoroutine started");
+        isCharging = true;
+
+        _animator.SetTrigger("AttackTrigger");
+        yield return new WaitForSeconds(1f);
+
+        Vector2 direction = (_target.position - transform.position).normalized;
+        _rigidbody.velocity = direction * (movementSpeed * 2f);
+        
+        yield return new WaitForSeconds(0.5f);
+
+        _rigidbody.velocity = Vector2.zero;
+
+        _animator.SetTrigger("IdleTrigger");
+
+        yield return new WaitForSeconds(0.5f);
+
+        isCharging = false;
     }
 
     public void Attack()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
-
-        if (distanceToPlayer <= attackRange)
-        {
-            // Play attack animation
-            _animator.SetTrigger("AttackTrigger");
-
-            /*
-            * Deal damage to player
-            player.GetComponent<Health>.TakeDamage(finalDamage);
-            */
-        }
-
+        Debug.Log("Zombie is attacking");
+        _animator.SetTrigger("AttackTrigger");
+        
+        /*
+        * Deal damage to player
+        player.GetComponent<Health>.TakeDamage(finalDamage);
+        */
     }
 
     public void TakeDamage(int damage)
@@ -106,7 +180,6 @@ public class ZombieEnemy : MonoBehaviour, IEnemy
         }
     }
 
-    // Setters
     public ZombieEnemy setTarget(Transform target)
     {
         this._target = target;
