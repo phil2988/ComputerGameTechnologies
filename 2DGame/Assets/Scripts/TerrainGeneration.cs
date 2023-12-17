@@ -12,6 +12,7 @@ public class TerrainGeneration : MonoBehaviour
         PathPartial,
         Void,
         Grass,
+        Poi,
         Test
     }
 
@@ -21,6 +22,7 @@ public class TerrainGeneration : MonoBehaviour
         { TileTypes.Void , Color.white },
         { TileTypes.Grass , Color.green },
         { TileTypes.Test , Color.yellow },
+        { TileTypes.Poi , Color.magenta },
     };
 
     public List<Tile> grassTiles = new();
@@ -50,12 +52,16 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                terrainTexture.SetPixel(x, y, Color.white);
+                if(IsTileInTilemapsEmpty(x + startPos.x, y + startPos.y))
+                {
+                    terrainTexture.SetPixel(x, y, TileColors.Where((tile) => tile.Key == TileTypes.Void).Single().Value);
+                }
+                else
+                {
+                    terrainTexture.SetPixel(x, y, TileColors.Where((tile) => tile.Key == TileTypes.Poi).Single().Value);
+                }
             }
         }
-
-        Renderer renderer = GetComponent<Renderer>();
-        renderer.material.mainTexture = terrainTexture;
 
         Debug.Log("Loading tiles from resouces...");
         LoadTiles();
@@ -86,10 +92,8 @@ public class TerrainGeneration : MonoBehaviour
         terrainTexture.Apply();
         Debug.Log("Done!");
 
-        Debug.Log("Generating void section of texture...");
-        GenerateVoidArea();
-        terrainTexture.Apply();
-        Debug.Log("Done!");
+        Renderer renderer = GetComponent<Renderer>();
+        renderer.material.mainTexture = terrainTexture;
 
         Debug.Log("Applying terrain data to tilemap...");
         PaintTerrain();
@@ -125,29 +129,6 @@ public class TerrainGeneration : MonoBehaviour
             if (i == tilesFolder.Length -1)
             {
                 testTile = tilesFolder[i];
-            }
-        }
-    }
-
-    void GenerateVoidArea(TileTypes tileType = TileTypes.Void)
-    {
-        for (int x = 0; x < pixWidth; x++)
-        {
-            for (int y = 0; y < pixHeight; y++)
-            {
-                if(IsTileInDecorationTilemapsEmpty(x, y))
-                {
-                    voidTileMap.SetTile(
-                        new Vector3Int(x, y, 0),
-                        voidTile
-                    );
-
-                    //terrainTexture.SetPixel(
-                    //    x,
-                    //    y,
-                    //    TileColors.Where((tile) => tile.Key == tileType).Single().Value
-                    //);
-                }
             }
         }
     }
@@ -492,18 +473,17 @@ public class TerrainGeneration : MonoBehaviour
         return adjecentTiles;
     }
 
-    public bool IsTileInDecorationTilemapsEmpty(int x, int y)
+    public bool IsTileInTilemapsEmpty(int x, int y)
     {
         // Check the poi tilemaps to see if they have the coordinate set
-        foreach (var tilemap in poiTileMaps)
+        for (int i = 0; i < poiTileMaps.Count; i++)
         {
-            if (tilemap.HasTile(new Vector3Int(x, y, 0)))
+            if (poiTileMaps[i].HasTile(new Vector3Int(x, y, 0)))
             {
                 return false;
             }
         }
 
-        // Also check the terrain
         if(terrainTileMap.HasTile(new Vector3Int(x, y, 0)))
         {
             return false;
