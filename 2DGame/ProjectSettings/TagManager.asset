@@ -42,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Terrain
+    uniqueID: 1777267549
+    locked: 0
+  - name: Void
+    uniqueID: 3162961003
+    locked: 0
   - name: Layer 1
     uniqueID: 2981748697
     locked: 0

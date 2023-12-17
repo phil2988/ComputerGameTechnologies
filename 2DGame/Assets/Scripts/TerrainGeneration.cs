@@ -12,6 +12,7 @@ public class TerrainGeneration : MonoBehaviour
         PathPartial,
         Void,
         Grass,
+        Poi,
         Test
     }
 
@@ -21,12 +22,16 @@ public class TerrainGeneration : MonoBehaviour
         { TileTypes.Void , Color.white },
         { TileTypes.Grass , Color.green },
         { TileTypes.Test , Color.yellow },
+        { TileTypes.Poi , Color.magenta },
     };
 
     public List<Tile> grassTiles = new();
     public List<Tile> fullPathTiles = new();
     public List<Tile> partialPathTiles = new();
+
     public Tilemap terrainTileMap;
+    public Tilemap voidTileMap;
+    public List<Tilemap> poiTileMaps;
     public Tile voidTile;
     public Tile testTile;
 
@@ -42,13 +47,24 @@ public class TerrainGeneration : MonoBehaviour
     {
         terrainTexture = new(pixWidth, pixHeight);
 
+        // Fill the texture with white
+        for (int x = 0; x < pixWidth; x++)
+        {
+            for (int y = 0; y < pixHeight; y++)
+            {
+                if(IsTileInTilemapsEmpty(x + startPos.x, y + startPos.y))
+                {
+                    terrainTexture.SetPixel(x, y, TileColors.Where((tile) => tile.Key == TileTypes.Void).Single().Value);
+                }
+                else
+                {
+                    terrainTexture.SetPixel(x, y, TileColors.Where((tile) => tile.Key == TileTypes.Poi).Single().Value);
+                }
+            }
+        }
+
         Debug.Log("Loading tiles from resouces...");
         LoadTiles();
-        Debug.Log("Done!");
-
-        Debug.Log("Generating void section of texture...");
-        GenerateVoidArea();
-        terrainTexture.Apply();
         Debug.Log("Done!");
 
         Debug.Log("Generating path section of texture...");
@@ -117,21 +133,6 @@ public class TerrainGeneration : MonoBehaviour
         }
     }
 
-    void GenerateVoidArea(TileTypes tileType = TileTypes.Void)
-    {
-        for (int x = 0; x < pixWidth; x++)
-        {
-            for (int y = 0; y < pixHeight; y++)
-            {
-                terrainTexture.SetPixel(
-                    x,
-                    y,
-                    TileColors.Where((tile) => tile.Key == tileType).Single().Value
-                );
-            }
-        }
-    }
-
     void GeneratePathArea(TileTypes tileType = TileTypes.PathFull, int repetitions = 1)
     {
         Texture2D perlinData = new(pixWidth, pixHeight);
@@ -142,7 +143,9 @@ public class TerrainGeneration : MonoBehaviour
             // Generate all the perlins needed
             for (int i = 0; i < repetitions; i++)
             {
-                thinPerlinTextures.Add(ThinLines(GeneratePerlinTexture()));
+                var basic = GeneratePerlinTexture();
+                var thin = ThinLines(basic);
+                thinPerlinTextures.Add(thin);
             }
 
             // Combine all the perlins into one texture
@@ -267,8 +270,8 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                if(terrainTexture.GetPixel(x, y) == Color.black)
-                {
+                //if(terrainTexture.GetPixel(x, y) == Color.black)
+                //{
                     var rand = UnityEngine.Random.Range(0, likelyhood);
 
                     if(rand == 1)
@@ -279,7 +282,7 @@ public class TerrainGeneration : MonoBehaviour
                             TileColors.Where((tile) => tile.Key == TileTypes.Test).Single().Value
                         );
                     }
-                }
+                //}
             }
         }
     }
@@ -291,7 +294,6 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                var tmp = terrainTexture.GetPixel(x, y);
                 // Check which type of pixel x, y is
                 var pixel = TileColors.Where((tile) => tile.Value == terrainTexture.GetPixel(x, y)).FirstOrDefault().Key;
 
@@ -299,7 +301,7 @@ public class TerrainGeneration : MonoBehaviour
                 switch (pixel)
                 {
                     case TileTypes.Void:
-                        terrainTileMap.SetTile(
+                        voidTileMap.SetTile(
                             startPos + new Vector3Int(x, y, 0),
                             GetRandomTile(TileTypes.Void)
                         );
@@ -309,7 +311,7 @@ public class TerrainGeneration : MonoBehaviour
                         terrainTileMap.SetTile(
                             startPos + new Vector3Int(x, y, 0),
                             GetRandomTile(TileTypes.PathFull)
-                        ); 
+                        );
                         break;
 
                     case TileTypes.PathPartial:
@@ -334,13 +336,9 @@ public class TerrainGeneration : MonoBehaviour
                         break;
 
                     default:
-                        terrainTileMap.SetTile(
-                             startPos + new Vector3Int(x, y, 0),
-                             GetRandomTile(TileTypes.Grass)
-                         );
-                        break;
-                }
 
+                        break;   
+                }
             }
         }
     }
@@ -382,15 +380,13 @@ public class TerrainGeneration : MonoBehaviour
         // For each pixel in the texture...
         for (int x = 0; x < pixWidth; x++)
         {
-                for (int y = 0; y < pixHeight; y++)
-                {
+                for (int y = 0; y < pixHeight; y++) {
                     Color color = PaintPerlin(x, y, 0.4f, 8f, perlinOffset);
-                    if(color == Color.black)
-                    {
-                        noiseTex.SetPixel(x, y, color);
-                    }
+                if (color == Color.black) {
+                    noiseTex.SetPixel(x, y, color);
                 }
             }
+        }
         // Apply the generated perlin to the texture
         noiseTex.Apply();
         return noiseTex;
@@ -409,6 +405,7 @@ public class TerrainGeneration : MonoBehaviour
         }
         return Color.white;
     }
+
     Texture2D ThinLines(Texture2D texture)
     {
         Texture2D updatedTexture = texture;
@@ -461,6 +458,7 @@ public class TerrainGeneration : MonoBehaviour
         Padding,
         Thinning
     }
+
     public int FindAllBlackNeighbors(Vector2Int gameOjectPosition, Texture2D texture, NeighbourType neighbourType)
     {
         int adjecentTiles = 0;
@@ -475,4 +473,22 @@ public class TerrainGeneration : MonoBehaviour
         return adjecentTiles;
     }
 
+    public bool IsTileInTilemapsEmpty(int x, int y)
+    {
+        // Check the poi tilemaps to see if they have the coordinate set
+        for (int i = 0; i < poiTileMaps.Count; i++)
+        {
+            if (poiTileMaps[i].HasTile(new Vector3Int(x, y, 0)))
+            {
+                return false;
+            }
+        }
+
+        if(terrainTileMap.HasTile(new Vector3Int(x, y, 0)))
+        {
+            return false;
+        }
+
+        return true;
+    }
 }
