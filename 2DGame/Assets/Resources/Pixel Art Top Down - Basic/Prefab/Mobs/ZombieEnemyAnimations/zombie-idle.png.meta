@@ -272,7 +272,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie-idle_0: -5761941593966414887
+      zombie-idle_1: -5154114815848821289
+      zombie-idle_2: -6474228925126837287
+      zombie-idle_3: 5478335810736015415
+      zombie-idle_4: 815516878887773852
+      zombie-idle_5: 7996006584867463696
+      zombie-idle_6: 522164747847080185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
