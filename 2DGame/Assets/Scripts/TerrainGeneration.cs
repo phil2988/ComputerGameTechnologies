@@ -27,6 +27,7 @@ public class TerrainGeneration : MonoBehaviour
     public List<Tile> fullPathTiles = new();
     public List<Tile> partialPathTiles = new();
     public Tilemap terrainTileMap;
+    public List<Tilemap> poiTileMaps;
     public Tile voidTile;
     public Tile testTile;
 
@@ -46,33 +47,33 @@ public class TerrainGeneration : MonoBehaviour
         LoadTiles();
         Debug.Log("Done!");
 
-        Debug.Log("Generating void section of texture...");
-        GenerateVoidArea();
-        terrainTexture.Apply();
-        Debug.Log("Done!");
-
         Debug.Log("Generating path section of texture...");
         GeneratePathArea(repetitions: 5);
         terrainTexture.Apply();
         Debug.Log("Done!");
 
-        Debug.Log("Generating path padding section of texture...");
-        GeneratePathPadding();
-        terrainTexture.Apply();
-        Debug.Log("Done!");
+        //Debug.Log("Generating path padding section of texture...");
+        //GeneratePathPadding();
+        //terrainTexture.Apply();
+        //Debug.Log("Done!");
 
         //Debug.Log("Generating path padding section of texture...");
         //GeneratePointsOfInterest();
         //terrainTexture.Apply();
         //Debug.Log("Done!");
 
-        Debug.Log("Generating grass padding of paths...");
-        GenerateGrassPadding();
-        terrainTexture.Apply();
-        Debug.Log("Done!");
+        //Debug.Log("Generating grass padding of paths...");
+        //GenerateGrassPadding();
+        //terrainTexture.Apply();
+        //Debug.Log("Done!");
 
-        Debug.Log("Generating grass padding of paths...");
-        GenerateGrassPadding();
+        //Debug.Log("Generating grass padding of paths...");
+        //GenerateGrassPadding();
+        //terrainTexture.Apply();
+        //Debug.Log("Done!");
+
+        Debug.Log("Generating void section of texture...");
+        GenerateVoidArea();
         terrainTexture.Apply();
         Debug.Log("Done!");
 
@@ -82,6 +83,8 @@ public class TerrainGeneration : MonoBehaviour
         Debug.Log("Applying terrain data to tilemap...");
         PaintTerrain();
         Debug.Log("Done!");
+
+
 
         Debug.Log("Done Generating Texture!");
     }
@@ -123,11 +126,21 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                terrainTexture.SetPixel(
-                    x,
-                    y,
-                    TileColors.Where((tile) => tile.Key == tileType).Single().Value
-                );
+                if(IsTileInDecorationTilemapsEmpty(x, y))
+                {
+                    terrainTexture.SetPixel(
+                        x,
+                        y,
+                        TileColors.Where((tile) => tile.Key == tileType).Single().Value
+                    );
+
+                    //terrainTexture.SetPixel(
+                    //    x,
+                    //    y,
+                    //    TileColors.Where((tile) => tile.Key == tileType).Single().Value
+                    //);
+                }
+
             }
         }
     }
@@ -165,14 +178,14 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                if (perlinData.GetPixel(x, y) == Color.black)
-                {
+                //if (perlinData.GetPixel(x, y) == Color.black)
+                //{
                     terrainTexture.SetPixel(
                         x,
                         y,
                         TileColors.Where((tile) => tile.Key == tileType).Single().Value
                     );
-                }
+                //}
             }
         }
     }
@@ -267,8 +280,8 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                if(terrainTexture.GetPixel(x, y) == Color.black)
-                {
+                //if(terrainTexture.GetPixel(x, y) == Color.black)
+                //{
                     var rand = UnityEngine.Random.Range(0, likelyhood);
 
                     if(rand == 1)
@@ -279,7 +292,7 @@ public class TerrainGeneration : MonoBehaviour
                             TileColors.Where((tile) => tile.Key == TileTypes.Test).Single().Value
                         );
                     }
-                }
+                //}
             }
         }
     }
@@ -298,18 +311,18 @@ public class TerrainGeneration : MonoBehaviour
                 // Color the tile according to the selected pixel
                 switch (pixel)
                 {
-                    case TileTypes.Void:
-                        terrainTileMap.SetTile(
-                            startPos + new Vector3Int(x, y, 0),
-                            GetRandomTile(TileTypes.Void)
-                        );
-                        break;
+                    //case TileTypes.Void:
+                    //    terrainTileMap.SetTile(
+                    //        startPos + new Vector3Int(x, y, 0),
+                    //        GetRandomTile(TileTypes.Void)
+                    //    );
+                    //    break;
 
                     case TileTypes.PathFull:
                         terrainTileMap.SetTile(
                             startPos + new Vector3Int(x, y, 0),
                             GetRandomTile(TileTypes.PathFull)
-                        ); 
+                        );
                         break;
 
                     case TileTypes.PathPartial:
@@ -335,12 +348,11 @@ public class TerrainGeneration : MonoBehaviour
 
                     default:
                         terrainTileMap.SetTile(
-                             startPos + new Vector3Int(x, y, 0),
-                             GetRandomTile(TileTypes.Grass)
-                         );
-                        break;
+                                startPos + new Vector3Int(x, y, 0),
+                                GetRandomTile(TileTypes.Grass)
+                            );
+                        break;   
                 }
-
             }
         }
     }
@@ -382,15 +394,13 @@ public class TerrainGeneration : MonoBehaviour
         // For each pixel in the texture...
         for (int x = 0; x < pixWidth; x++)
         {
-                for (int y = 0; y < pixHeight; y++)
-                {
+                for (int y = 0; y < pixHeight; y++) {
                     Color color = PaintPerlin(x, y, 0.4f, 8f, perlinOffset);
-                    if(color == Color.black)
-                    {
-                        noiseTex.SetPixel(x, y, color);
-                    }
+                if (color == Color.black) {
+                    noiseTex.SetPixel(x, y, color);
                 }
             }
+        }
         // Apply the generated perlin to the texture
         noiseTex.Apply();
         return noiseTex;
@@ -475,4 +485,23 @@ public class TerrainGeneration : MonoBehaviour
         return adjecentTiles;
     }
 
+    public bool IsTileInDecorationTilemapsEmpty(int x, int y)
+    {
+        // Check the poi tilemaps to see if they have the coordinate set
+        foreach (var tilemap in poiTileMaps)
+        {
+            if (tilemap.HasTile(new Vector3Int(x, y, 0)))
+            {
+                return false;
+            }
+        }
+
+        // Also check the terrain
+        if(terrainTileMap.HasTile(new Vector3Int(x, y, 0)))
+        {
+            return false;
+        }
+
+        return true;
+    }
 }
