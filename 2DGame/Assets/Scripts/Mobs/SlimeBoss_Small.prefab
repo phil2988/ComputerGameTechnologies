@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 1181976352643050634}
   - component: {fileID: 6300135239642884101}
   - component: {fileID: 6544558930530832704}
+  - component: {fileID: -2573911647590330316}
+  - component: {fileID: 5833121151169269401}
+  - component: {fileID: 862159370714550373}
   m_Layer: 0
   m_Name: SlimeBoss_Small
   m_TagString: Untagged
@@ -188,3 +191,63 @@ CapsuleCollider2D:
   m_Offset: {x: -0.058929026, y: -0.45410547}
   m_Size: {x: 1.3354695, y: 0.8848206}
   m_Direction: 1
+--- !u!114 &-2573911647590330316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466720096231602599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a10dceb2f6fd64aa19bc5b06add47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 75
+  maxHealth: 75
+  OnHitWithReference:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeathWithReference:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5833121151169269401}
+        m_TargetAssemblyTypeName: OnSmallSlimeDeath, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isDead: 0
+--- !u!114 &5833121151169269401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466720096231602599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6eda0494a564584ab6f9840aa105799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &862159370714550373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466720096231602599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c423c8fae0c2e7d4385f7b4aacac178a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistanceThreshold: 1.25
+  attackDelay: 0.25
+  damageAmount: 5

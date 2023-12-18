@@ -18,6 +18,7 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         if (player == null)
         {
+            Debug.Log(("No player"));
             return;
         }
 
@@ -29,6 +30,7 @@ public class EnemyAI : MonoBehaviour
             {
                 passedTime = 0;
                 PlayerStats playerStats = player.GetComponent<PlayerStats>();
+                Debug.Log("Kill!");
                 playerStats.TakeDamage((int)damageAmount);
             }
         }

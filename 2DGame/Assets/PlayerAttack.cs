@@ -13,6 +13,8 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     public PlayerMovement pm;
     public float attackRadius;
+
+    [SerializeField] private PlayerStats _playerStats;
     void Update()
     {
         Vector2 direction = pm.getLastDirection();
@@ -122,8 +124,7 @@ public class PlayerAttack : MonoBehaviour
             Health health = collider.GetComponent<Health>();
             if (health)
             {
-                Debug.Log(collider.name);
-                health.GetHit(10, gameObject);
+                health.GetHit(_playerStats.Damage, gameObject);
             }
         }
         

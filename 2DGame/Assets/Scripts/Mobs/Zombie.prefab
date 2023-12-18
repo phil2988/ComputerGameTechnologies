@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7020459518822492744}
   - component: {fileID: 775252295946187642}
   - component: {fileID: 9135260647956823529}
+  - component: {fileID: -6326447153208196192}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -231,7 +232,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDeathWithReference:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -6326447153208196192}
+        m_TargetAssemblyTypeName: DropChance, Assembly-CSharp
+        m_MethodName: DropCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isDead: 0
 --- !u!114 &775252295946187642
 MonoBehaviour:
@@ -293,3 +306,17 @@ MonoBehaviour:
   attackDistanceThreshold: 0.8
   attackDelay: 1
   damageAmount: 10
+--- !u!114 &-6326447153208196192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715139731588995139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d926e08eb8d39bf41b8f56d70e6b51ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 2272517528717507608, guid: 160b7eff0b6fc774cb3041246efa08d4, type: 3}
+  dropChance: 1

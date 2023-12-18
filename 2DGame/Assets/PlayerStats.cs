@@ -10,9 +10,10 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int minHealth;
     [SerializeField] private int currHealth;
 
-    [SerializeField] private int maxArmor;
-    [SerializeField] private int minArmor;
-    [SerializeField] private int currArmor;
+    [SerializeField] private int firerate;
+    [SerializeField] private int damage;
+    [SerializeField] private int movementSpeed;
+    [SerializeField] private int luck;
 
     [SerializeField] public Transform respawnPoint;
     [SerializeField] public GameObject player;
@@ -25,7 +26,6 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         currHealth = maxHealth;
-        currArmor = maxArmor;
         healthBar.SetMaxHealth(maxHealth);
     }
 
@@ -49,17 +49,6 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-
-    public int GetPlayerArmor()
-    {
-        return currArmor;
-    }
-
-    private void SetPlayerArmor(int armor)
-    {
-        currArmor = armor;
-    }
-
     public int GetPlayerHealth()
     {
         return currHealth;
@@ -78,4 +67,42 @@ public class PlayerStats : MonoBehaviour
         SetPlayerHealth(maxHealth);
         playerMovement.gameOver = false;
     }
+
+    public void AddMaxHealth(int value)
+    {
+        maxHealth = maxHealth + value;
+    }
+    
+    
+
+    public void Heal(int value)
+    {
+        currHealth = currHealth + value;
+    }
+    
+    public int Firerate
+    {
+        get => firerate;
+        set => firerate = value;
+    }
+
+    public int Damage
+    {
+        get => damage;
+        set => damage = value;
+    }
+
+    public int MovementSpeed
+    {
+        get => movementSpeed;
+        set => movementSpeed = value;
+    }
+
+    public int Luck
+    {
+        get => luck;
+        set => luck = value;
+    }
+    
+    
 }
