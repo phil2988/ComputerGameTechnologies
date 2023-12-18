@@ -10,7 +10,6 @@ namespace Assets.Scripts.Mobs
 {
     public class SlimeBoss : MonoBehaviour
     {
-        private float health;
         private float movementSpeed;
         private float detectionRadius; // TODO: Maybe remove this - For now just set a high value
 
@@ -20,6 +19,8 @@ namespace Assets.Scripts.Mobs
         public float attackSpeed;
         public float attackInterval;
         private float attackTimer;
+
+        public float health;
 
         public GameObject smallerSlimePrefab;
         public GameObject projectilePrefab;
@@ -145,7 +146,7 @@ namespace Assets.Scripts.Mobs
         {
             if (_animator != null)
             {
-                _animator.SetTrigger("Die");
+                //_animator.SetTrigger("Die");
                 DropLoot();
                 Destroy(gameObject);
             }

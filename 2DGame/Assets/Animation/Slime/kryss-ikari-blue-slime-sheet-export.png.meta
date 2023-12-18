@@ -1,0 +1,1292 @@
+fileFormatVersion: 2
+guid: c0fc014b5e033884aaac1bd8ace58591
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1131532847090169919
+    second: kryss-ikari-blue-slime-sheet-export_0
+  - first:
+      213: -5229651307133787649
+    second: kryss-ikari-blue-slime-sheet-export_1
+  - first:
+      213: 977849504697435048
+    second: kryss-ikari-blue-slime-sheet-export_2
+  - first:
+      213: -8832226070805515045
+    second: kryss-ikari-blue-slime-sheet-export_3
+  - first:
+      213: 7199509818807137251
+    second: kryss-ikari-blue-slime-sheet-export_4
+  - first:
+      213: -5436281696949579068
+    second: kryss-ikari-blue-slime-sheet-export_5
+  - first:
+      213: 1087652157322025708
+    second: kryss-ikari-blue-slime-sheet-export_6
+  - first:
+      213: -3012490239233194094
+    second: kryss-ikari-blue-slime-sheet-export_7
+  - first:
+      213: 6243457328367060082
+    second: kryss-ikari-blue-slime-sheet-export_8
+  - first:
+      213: -25018984642139936
+    second: kryss-ikari-blue-slime-sheet-export_9
+  - first:
+      213: 1539796979403083423
+    second: kryss-ikari-blue-slime-sheet-export_10
+  - first:
+      213: 1854432277430763716
+    second: kryss-ikari-blue-slime-sheet-export_11
+  - first:
+      213: -8031935516301545259
+    second: kryss-ikari-blue-slime-sheet-export_12
+  - first:
+      213: 3831979931923404364
+    second: kryss-ikari-blue-slime-sheet-export_13
+  - first:
+      213: 869862897212553443
+    second: kryss-ikari-blue-slime-sheet-export_14
+  - first:
+      213: -1418619362922739067
+    second: kryss-ikari-blue-slime-sheet-export_15
+  - first:
+      213: 1792350544697336074
+    second: kryss-ikari-blue-slime-sheet-export_16
+  - first:
+      213: 3558055034914364246
+    second: kryss-ikari-blue-slime-sheet-export_17
+  - first:
+      213: -4723367302243825824
+    second: kryss-ikari-blue-slime-sheet-export_18
+  - first:
+      213: -3380208318314887143
+    second: kryss-ikari-blue-slime-sheet-export_19
+  - first:
+      213: -7581250199997848294
+    second: kryss-ikari-blue-slime-sheet-export_20
+  - first:
+      213: -459212606389748917
+    second: kryss-ikari-blue-slime-sheet-export_21
+  - first:
+      213: -7566793192060069431
+    second: kryss-ikari-blue-slime-sheet-export_22
+  - first:
+      213: -2592592086814976435
+    second: kryss-ikari-blue-slime-sheet-export_23
+  - first:
+      213: 2930391536531802667
+    second: kryss-ikari-blue-slime-sheet-export_24
+  - first:
+      213: 3156223261527677779
+    second: kryss-ikari-blue-slime-sheet-export_25
+  - first:
+      213: 4535035546589888513
+    second: kryss-ikari-blue-slime-sheet-export_26
+  - first:
+      213: 8913428697829222656
+    second: kryss-ikari-blue-slime-sheet-export_27
+  - first:
+      213: -6487337916805051309
+    second: kryss-ikari-blue-slime-sheet-export_28
+  - first:
+      213: 8039905029377405589
+    second: kryss-ikari-blue-slime-sheet-export_29
+  - first:
+      213: 592773201584430374
+    second: kryss-ikari-blue-slime-sheet-export_30
+  - first:
+      213: 9088299541859938718
+    second: kryss-ikari-blue-slime-sheet-export_31
+  - first:
+      213: 5067284407618401333
+    second: kryss-ikari-blue-slime-sheet-export_32
+  - first:
+      213: -8537445492141650371
+    second: kryss-ikari-blue-slime-sheet-export_33
+  - first:
+      213: 2788038974993303835
+    second: kryss-ikari-blue-slime-sheet-export_34
+  - first:
+      213: -2152910002386259386
+    second: kryss-ikari-blue-slime-sheet-export_35
+  - first:
+      213: -3616751998835679734
+    second: kryss-ikari-blue-slime-sheet-export_36
+  - first:
+      213: -7614411487824032555
+    second: kryss-ikari-blue-slime-sheet-export_37
+  - first:
+      213: 5979961187662332635
+    second: kryss-ikari-blue-slime-sheet-export_38
+  - first:
+      213: 5040105300873722829
+    second: kryss-ikari-blue-slime-sheet-export_39
+  - first:
+      213: 5651139485254128721
+    second: kryss-ikari-blue-slime-sheet-export_40
+  - first:
+      213: 7431743041942293357
+    second: kryss-ikari-blue-slime-sheet-export_41
+  - first:
+      213: -2429219528594393670
+    second: kryss-ikari-blue-slime-sheet-export_42
+  - first:
+      213: -4313209019923656706
+    second: kryss-ikari-blue-slime-sheet-export_43
+  - first:
+      213: 8323719493707587548
+    second: kryss-ikari-blue-slime-sheet-export_44
+  - first:
+      213: -922593714692845013
+    second: kryss-ikari-blue-slime-sheet-export_45
+  - first:
+      213: -1408662780485410036
+    second: kryss-ikari-blue-slime-sheet-export_46
+  - first:
+      213: 6079110716666169296
+    second: kryss-ikari-blue-slime-sheet-export_47
+  - first:
+      213: 5278981365445907418
+    second: kryss-ikari-blue-slime-sheet-export_48
+  - first:
+      213: -6323905416467270109
+    second: kryss-ikari-blue-slime-sheet-export_49
+  - first:
+      213: -129597242757260813
+    second: kryss-ikari-blue-slime-sheet-export_50
+  - first:
+      213: -1013915074776506494
+    second: kryss-ikari-blue-slime-sheet-export_51
+  - first:
+      213: -1678622996240222485
+    second: kryss-ikari-blue-slime-sheet-export_52
+  - first:
+      213: -8494553319459239549
+    second: kryss-ikari-blue-slime-sheet-export_53
+  - first:
+      213: -3941297827042658560
+    second: kryss-ikari-blue-slime-sheet-export_54
+  - first:
+      213: 4592521789090489222
+    second: kryss-ikari-blue-slime-sheet-export_55
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1327.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e04d0e6f9bbdc489d9889cd7d5b4fb
+      internalID: 8583158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_1
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1327.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cb41459c0b34548afd32db5ae39780
+      internalID: -278928850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_2
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1327.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8214f5b14fcd74790a17689b966d5e
+      internalID: 1971784092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_3
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1327.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cf3b71420dfa842924a5fe3e639ca7
+      internalID: 1472289046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_4
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1327.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8037f328713ed2e4daf6fc8b0c113f8d
+      internalID: 177230086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_5
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1327.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91b4be1a9bd94244a094085dcee3b33
+      internalID: 403563365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_6
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1327.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4c728751e2c6b42b6ff40962363698
+      internalID: -579937507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1106.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92036292c2f56e84694ba63e51a315d3
+      internalID: -1292870078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_8
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1106.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec112fafa4c4d04aadadbc6d64aa5a8
+      internalID: 172370517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_9
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1106.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9d5ce264b4bf94eaeac4899f3c278c
+      internalID: 1640800581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_10
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1106.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164c32bff2dddd34db47dd925a05c708
+      internalID: -891119714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_11
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1106.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69066d66bf22ce349b4483b3b5289673
+      internalID: -654207645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_12
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1106.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecd48a5ca332bd4a842346d40293e91
+      internalID: 26215081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_13
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1106.7142
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e802605ac710341a4d5fb68372c7c1
+      internalID: 641144417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 888
+        width: 274
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15acd8aa97912e948886d007866d9ce4
+      internalID: 663744516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_15
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 885.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cb8387b22333046b506a54c45c34a1
+      internalID: 1325665960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_16
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 885.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7705894bc3482054db99b291098a5ea9
+      internalID: -1503927186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_17
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 885.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a5147b5db04564fbb621c952ab180c
+      internalID: 1370443461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_18
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 885.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bd46aa297e53345968f4f63873e8be
+      internalID: -1257583515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_19
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 885.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c25cbe47851d1548bf20429c1b14c8f
+      internalID: -1548048668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_20
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 885.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b7249afbdfc91478a5b0183b043ff7
+      internalID: 1919997948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 664.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b6f9550274ed5478afaaa7089b2d26
+      internalID: 980724115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_22
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 664.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d766f1340aae24a8a9a0e7a3156ab0
+      internalID: 748672937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_23
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 664.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bf360d2117b0c4a9997f11ff4075bf
+      internalID: 742811815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_24
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 664.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a815c687cacbf489f4ada8bc15b3aa
+      internalID: -1145833829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_25
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 664.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10403ffe73effc344850daa5f9e5612a
+      internalID: 1967260129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_26
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 664.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65469f0e54c9a945ab3ad0b3a27f4b1
+      internalID: -1576229366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_27
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 664.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0321857685f1c20469ab6db179355e82
+      internalID: 1636217745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 443.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc2c1cd7ebab454da791c9d8919c69d
+      internalID: -1606660944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_29
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 443.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766a5aef73b709c4c8e37e4bf3c022ff
+      internalID: -1466091409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_30
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 443.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2240ba26c4c11249a0299a2944fd2d7
+      internalID: 1109566817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_31
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 443.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c5f31e1839c6546b2cded59d9ad283
+      internalID: 596911269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_32
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 443.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2beee9d9c63e0347a8cc49003b73b8f
+      internalID: -1842980917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_33
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 443.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a305f8e43be8121458d116a4e822e918
+      internalID: -588436698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_34
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 443.7143
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f200099b691b14bb5cd7235256fc29
+      internalID: 1877079671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222.71428
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd956e44f83f6934cbed1e6f5eb6c5cf
+      internalID: 546089562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_36
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 222.71428
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9266d3a4d6fcf274fa597f04e786816d
+      internalID: -458731467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_37
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 222.71428
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88f6151ae7fae44e851c8789608c3b8
+      internalID: 54920630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_38
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 222.71428
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595bd5ebbdecab740ac9dbe4d4fe2bc5
+      internalID: -1973714377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_39
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 222.71428
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e0373132552a64ba3b7e7a5880778b
+      internalID: 1400134354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_40
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 222.71428
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af13161ac9f1a0468369338cc56cc49
+      internalID: 1841478758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_41
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 222.71428
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b244dab4f313b47aeda5145504a365
+      internalID: -118956126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.7142792
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b69bd4abe920f24d8a2e654bbcadb14
+      internalID: -655403828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_43
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1.7142792
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc1d04d49a66414e92c90618a1b43d8
+      internalID: 1777998756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_44
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1.7142792
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3549bbccd6633b34abd488935a8f30a9
+      internalID: 699799853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kryss-ikari-blue-slime-sheet-export_45
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1.7142792
+        width: 274.2857
+        height: 221.28572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd39d4ace34be8d4abd54c9d15b37853
+      internalID: 1180676284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3b69963e312b5e4449b9b05e07f4b608
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      kryss-ikari-blue-slime-sheet-export_0: 8583158
+      kryss-ikari-blue-slime-sheet-export_1: -278928850
+      kryss-ikari-blue-slime-sheet-export_10: -891119714
+      kryss-ikari-blue-slime-sheet-export_11: -654207645
+      kryss-ikari-blue-slime-sheet-export_12: 26215081
+      kryss-ikari-blue-slime-sheet-export_13: 641144417
+      kryss-ikari-blue-slime-sheet-export_14: 663744516
+      kryss-ikari-blue-slime-sheet-export_15: 1325665960
+      kryss-ikari-blue-slime-sheet-export_16: -1503927186
+      kryss-ikari-blue-slime-sheet-export_17: 1370443461
+      kryss-ikari-blue-slime-sheet-export_18: -1257583515
+      kryss-ikari-blue-slime-sheet-export_19: -1548048668
+      kryss-ikari-blue-slime-sheet-export_2: 1971784092
+      kryss-ikari-blue-slime-sheet-export_20: 1919997948
+      kryss-ikari-blue-slime-sheet-export_21: 980724115
+      kryss-ikari-blue-slime-sheet-export_22: 748672937
+      kryss-ikari-blue-slime-sheet-export_23: 742811815
+      kryss-ikari-blue-slime-sheet-export_24: -1145833829
+      kryss-ikari-blue-slime-sheet-export_25: 1967260129
+      kryss-ikari-blue-slime-sheet-export_26: -1576229366
+      kryss-ikari-blue-slime-sheet-export_27: 1636217745
+      kryss-ikari-blue-slime-sheet-export_28: -1606660944
+      kryss-ikari-blue-slime-sheet-export_29: -1466091409
+      kryss-ikari-blue-slime-sheet-export_3: 1472289046
+      kryss-ikari-blue-slime-sheet-export_30: 1109566817
+      kryss-ikari-blue-slime-sheet-export_31: 596911269
+      kryss-ikari-blue-slime-sheet-export_32: -1842980917
+      kryss-ikari-blue-slime-sheet-export_33: -588436698
+      kryss-ikari-blue-slime-sheet-export_34: 1877079671
+      kryss-ikari-blue-slime-sheet-export_35: 546089562
+      kryss-ikari-blue-slime-sheet-export_36: -458731467
+      kryss-ikari-blue-slime-sheet-export_37: 54920630
+      kryss-ikari-blue-slime-sheet-export_38: -1973714377
+      kryss-ikari-blue-slime-sheet-export_39: 1400134354
+      kryss-ikari-blue-slime-sheet-export_4: 177230086
+      kryss-ikari-blue-slime-sheet-export_40: 1841478758
+      kryss-ikari-blue-slime-sheet-export_41: -118956126
+      kryss-ikari-blue-slime-sheet-export_42: -655403828
+      kryss-ikari-blue-slime-sheet-export_43: 1777998756
+      kryss-ikari-blue-slime-sheet-export_44: 699799853
+      kryss-ikari-blue-slime-sheet-export_45: 1180676284
+      kryss-ikari-blue-slime-sheet-export_5: 403563365
+      kryss-ikari-blue-slime-sheet-export_6: -579937507
+      kryss-ikari-blue-slime-sheet-export_7: -1292870078
+      kryss-ikari-blue-slime-sheet-export_8: 172370517
+      kryss-ikari-blue-slime-sheet-export_9: 1640800581
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
