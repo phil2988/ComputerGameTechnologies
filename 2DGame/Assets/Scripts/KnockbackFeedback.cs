@@ -18,9 +18,7 @@ public class KnockbackFeedback : MonoBehaviour
         StopAllCoroutines();
         OnBegin?.Invoke();
         Vector2 direction = (transform.position - sender.transform.position).normalized;
-        Debug.Log(direction* strength);
-        Debug.Log(rb2d.position);
-        rb2d.AddForce(direction, ForceMode2D.Impulse);
+        rb2d.AddForce(direction, ForceMode2D.Force);
         StartCoroutine(Reset());
     }
     

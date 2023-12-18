@@ -41,6 +41,10 @@ public class Health : MonoBehaviour
         {
             OnDeathWithReference?.Invoke(sender);
             isDead = true;
+            Debug.Log(sender.name);
+            
+                Destroy(gameObject);
+            
         }
     }
 }

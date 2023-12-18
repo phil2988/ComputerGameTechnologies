@@ -119,11 +119,11 @@ public class PlayerAttack : MonoBehaviour
     {
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(sword.position, attackRadius))
         {
-            ZombieEnemy enemy = collider.GetComponent<ZombieEnemy>();
-            if (enemy)
+            Health health = collider.GetComponent<Health>();
+            if (health)
             {
                 Debug.Log(collider.name);
-                enemy.TakeDamage(10, gameObject);
+                health.GetHit(10, gameObject);
             }
         }
         
