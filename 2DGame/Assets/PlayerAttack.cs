@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,13 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public Rigidbody2D sword;
+    public Transform sword;
     public Animator animator;
-
     bool attackY;
     bool attackX;
     // Update is called once per frame
     public PlayerMovement pm;
+    public float attackRadius;
     void Update()
     {
         Vector2 direction = pm.getLastDirection();
@@ -105,5 +106,26 @@ public class PlayerAttack : MonoBehaviour
     private void SetPosDown()
     {
         sword.position = new Vector2(rb.position.x, rb.position.y -1);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Vector3 position = sword == null ? Vector3.zero : sword.position;
+        Gizmos.DrawWireSphere(position, attackRadius);
+    }
+
+    public void DetectColliders()
+    {
+        foreach (Collider2D collider in Physics2D.OverlapCircleAll(sword.position, attackRadius))
+        {
+            Health health = collider.GetComponent<Health>();
+            if (health)
+            {
+                Debug.Log(collider.name);
+                health.GetHit(10, gameObject);
+            }
+        }
+        
     }
 }

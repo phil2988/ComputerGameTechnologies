@@ -1,3 +1,4 @@
+using System;
 using Assets.Scripts.AI;
 using System.Collections;
 using UnityEngine;
@@ -19,10 +20,12 @@ public class ZombieEnemy : MonoBehaviour
     public Animator _animator;
     public Rigidbody2D _rigidbody;
 
+    private PlayerStats _playerStats;
+
     void Start()
     {
-        Debug.Log("Starting");
         setTarget(GameObject.FindGameObjectWithTag("Player").transform);
+        _playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
     void Update()
@@ -49,6 +52,16 @@ public class ZombieEnemy : MonoBehaviour
         //    StopMoving();
         //}
     }
+    
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name == "Player")
+        {
+            _playerStats.TakeDamage((int)damage);
+        }
+    }
+    
 
     void MoveTowardsTarget(Transform target)
     {
@@ -114,14 +127,17 @@ public class ZombieEnemy : MonoBehaviour
         */
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage, GameObject sender)
     {
+        Debug.Log("Taking damange");
         health -= damage;
-
+        
         if (health <= 0)
         {
             Die();
         }
+        //KnockbackFeedback knockbackFeedback = GetComponent<KnockbackFeedback>();
+        //knockbackFeedback.PlayFeedback(sender);
     }
 
     //public void DropLoot()
