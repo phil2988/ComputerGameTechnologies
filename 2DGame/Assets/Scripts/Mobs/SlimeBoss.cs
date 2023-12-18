@@ -11,7 +11,9 @@ namespace Assets.Scripts.Mobs
     public class SlimeBoss : MonoBehaviour
     {
         private float movementSpeed;
-        private float detectionRadius; // TODO: Maybe remove this - For now just set a high value
+        public float detectionRadius; // TODO: Maybe remove this - For now just set a high value
+        public float distanceToPlayer;
+
 
         // Attack
         public float damage;
@@ -45,7 +47,7 @@ namespace Assets.Scripts.Mobs
 
         public void FixedUpdate()
         {
-            float distanceToPlayer = Vector2.Distance(transform.position, _target.position);
+            distanceToPlayer = Vector2.Distance(transform.position, _target.position);
             if (health > 0)
             {
                 if (distanceToPlayer < detectionRadius)
@@ -84,9 +86,17 @@ namespace Assets.Scripts.Mobs
 
         public void MoveTowardsTarget(Transform target)
         {
+            Debug.Log("Moving towards target");
             _animator.SetTrigger("WalkTrigger");
             transform.position = Vector2.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+
+
+            Vector2 direction = (_target.transform.position - transform.position);
+            direction.Normalize();
+
+            _rigidbody.velocity = direction * movementSpeed;
         }
+
 
         public void SingleTargetAttack()
         {
