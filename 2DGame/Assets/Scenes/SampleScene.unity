@@ -13460,6 +13460,8 @@ MonoBehaviour:
   - {fileID: 110023436}
   voidTile: {fileID: 0}
   testTile: {fileID: 0}
+  mobPool:
+  - {fileID: 8488131666902381145, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
 --- !u!4 &907481853
 Transform:
   m_ObjectHideFlags: 0
