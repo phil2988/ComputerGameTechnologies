@@ -54506,7 +54506,7 @@ MonoBehaviour:
   voidTile: {fileID: 0}
   testTile: {fileID: 0}
   mobPool:
-  - {fileID: 8488131666902381145, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
+  - {fileID: 5715139731588995139, guid: 461f90176d0165545b4f9a08cd3e1bab, type: 3}
 --- !u!4 &907481853
 Transform:
   m_ObjectHideFlags: 0
@@ -54884,8 +54884,9 @@ GameObject:
   - component: {fileID: 1192877457}
   - component: {fileID: 1192877455}
   - component: {fileID: 1192877458}
-  - component: {fileID: 1192877459}
-  m_Layer: 0
+  - component: {fileID: 1192877460}
+  - component: {fileID: 1192877461}
+  m_Layer: 6
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54967,8 +54968,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2075222721
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -279086164, guid: 3f35e834c7386fd43b1829857773f19d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -54981,22 +54982,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &1192877459
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!70 &1192877460
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192877453}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -55004,10 +54999,53 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.12136663, y: -0.17270887}
+  m_Size: {x: 1.494533, y: 1.4975541}
+  m_Direction: 0
+--- !u!114 &1192877461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192877453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829b0211db0073d44a6a8f7ddc1eae2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAttackPeformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1935581693}
+        m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
+        m_MethodName: DetectColliders
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1216246460
 GameObject:
   m_ObjectHideFlags: 0
@@ -56463,7 +56501,7 @@ GameObject:
   - component: {fileID: 1935581694}
   - component: {fileID: 1935581695}
   - component: {fileID: 1935581696}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -56617,9 +56655,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1935581690}
-  sword: {fileID: 1192877459}
+  sword: {fileID: 1192877457}
   animator: {fileID: 1192877455}
   pm: {fileID: 1935581691}
+  attackRadius: 0.58
 --- !u!114 &1935581694
 MonoBehaviour:
   m_ObjectHideFlags: 0
