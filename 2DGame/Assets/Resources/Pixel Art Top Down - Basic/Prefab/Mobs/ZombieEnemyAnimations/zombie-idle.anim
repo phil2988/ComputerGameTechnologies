@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: zombie_idle
+  m_Name: zombie-idle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,26 +20,26 @@ AnimationClip:
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
-    - time: 0
+    - time: 0.015625
       value: {fileID: -5761941593966414887, guid: ca81d76a7748af24c8fa0ad98739d77d, type: 3}
-    - time: 0.125
+    - time: 0.140625
       value: {fileID: -5154114815848821289, guid: ca81d76a7748af24c8fa0ad98739d77d, type: 3}
-    - time: 0.25
+    - time: 0.28125
       value: {fileID: -6474228925126837287, guid: ca81d76a7748af24c8fa0ad98739d77d, type: 3}
-    - time: 0.375
+    - time: 0.390625
       value: {fileID: 5478335810736015415, guid: ca81d76a7748af24c8fa0ad98739d77d, type: 3}
-    - time: 0.5
+    - time: 0.515625
       value: {fileID: 815516878887773852, guid: ca81d76a7748af24c8fa0ad98739d77d, type: 3}
-    - time: 0.625
+    - time: 0.65625
       value: {fileID: 7996006584867463696, guid: ca81d76a7748af24c8fa0ad98739d77d, type: 3}
-    - time: 0.75
+    - time: 0.78125
       value: {fileID: 522164747847080185, guid: ca81d76a7748af24c8fa0ad98739d77d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 16
+  m_SampleRate: 64
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -68,7 +68,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8125
+    m_StopTime: 0.796875
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
