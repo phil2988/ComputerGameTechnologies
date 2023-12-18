@@ -9,6 +9,7 @@ public class SkeletonProjectile : MonoBehaviour
     public GameObject projectilePrefab;
     public float projectileSpeed = 2f;
     public float fireInterval = 2f;
+    public float projectileLifetime = 5f;
 
     private Transform player;
     private float timeSinceLastFire = 0f;
@@ -44,5 +45,6 @@ public class SkeletonProjectile : MonoBehaviour
         Vector2 direction = (player.position - transform.position).normalized;
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
         projectileRb.velocity = direction * projectileSpeed;
+        Destroy(projectile, projectileLifetime);
     }
 }

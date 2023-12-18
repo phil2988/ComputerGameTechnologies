@@ -8,43 +8,25 @@ public class EnemySoundsManager : MonoBehaviour, IEnemySound
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if (soundSettings == null)
-        {
-            Debug.LogError("Sound settings not assigned to EnemySoundsManager");
-        }
     }
 
-    public void DropLoot(GameObject lootPrefab, int lootAmount)
+    public void PlayIdleSound()
     {
-        for (int i = 0; i < lootAmount; i++)
-        {
-            Instantiate(lootPrefab, transform.position, Quaternion.identity);
-        }
+        PlaySound(soundSettings.idleSound);
     }
 
-    public void Die()
+    public void PlayAttackSound()
     {
-        Destroy(gameObject);
+        PlaySound(soundSettings.attackSound);
     }
 
-    public void PlayDeathSound(AudioClip deathSound)
+    public void PlayTakeDamageSound()
     {
-        PlaySound(deathSound);
+        PlaySound(soundSettings.takeDamageSound);
     }
-
-    public void PlayIdleSound(AudioClip idleSound)
+    public void PlayDeathSound()
     {
-        PlaySound(idleSound);
-    }
-
-    public void PlayAttackSound(AudioClip attackSound)
-    {
-        PlaySound(attackSound);
-    }
-
-    public void PlayTakeDamageSound(AudioClip takeDamageSound)
-    {
-        PlaySound(takeDamageSound);
+        PlaySound(soundSettings.deathSound);
     }
 
     private void PlaySound(AudioClip sound)

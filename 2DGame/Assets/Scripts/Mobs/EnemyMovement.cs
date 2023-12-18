@@ -1,13 +1,11 @@
 using Assets.Scripts.AI;
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour, IEnemyMovement
 {
     public float movementSpeed;
     public float detectionRadius;
-    public float soundCooldown = 8f;
+    public float soundCooldown;
     
     float distanceToPlayer;
     float timeSinceLastSound;
@@ -16,11 +14,6 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
     private Animator anim;
     private Rigidbody2D rb;
     private ScaleDeathAnimation scaleDeathAnimationScript; // Disabled
-    private SoundSettingsSO soundSettings;
-
-    [SerializeField]
-    private EnemyAudioManager audioManager;
-    [SerializeField]
     private EnemySoundsManager soundsManager;
 
     void Start()
@@ -29,44 +22,25 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         scaleDeathAnimationScript = GetComponent<ScaleDeathAnimation>();
-        audioManager = GetComponent<EnemyAudioManager>();
         soundsManager = GetComponent<EnemySoundsManager>();
-
-        if(audioManager != null)
-        {
-            Debug.LogError("audio manager is null");
-        }
-        else
-        {
-            Debug.Log("audio manager assigned");
-        }
-        if (soundsManager != null)
-        {
-            Debug.LogError("sounds manager is null");
-        }
-        else
-        {
-            Debug.Log("sounds manager assigned");
-        }
     }
 
     void Update()
     {
-        distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
+        distanceToPlayer = Vector2.Distance(transform.position, this.player.transform.position);
         if (distanceToPlayer <= detectionRadius)
         {
-            MoveTowardsPlayer(player, soundsManager);
+            MoveTowardsPlayer();
         }
         else
         {
-            BeIdle(soundsManager);
+            BeIdle();
         }
     }
 
-    public void MoveTowardsPlayer(Transform player, EnemySoundsManager soundsManager)
+    public void MoveTowardsPlayer()
     {
-        Vector2 direction = (player.position - transform.position).normalized;
+        Vector2 direction = (this.player.position - transform.position).normalized;
         rb.velocity = direction * movementSpeed;
 
         FlipSprite(direction.x);
@@ -74,7 +48,7 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
 
         if (CanPlaySound())
         {
-            audioManager.HandleIdle(soundsManager, soundSettings);
+            this.soundsManager.PlayIdleSound();
             ResetSoundCooldown();
         }
     }
@@ -91,15 +65,10 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
         }
     }
 
-    public void BeIdle(EnemySoundsManager enemySound)
+    public void BeIdle()
     {
         rb.velocity = Vector2.zero;
         anim.SetTrigger("IdleTrigger");
-        if (CanPlaySound())
-        {
-            audioManager.HandleIdle(enemySound, soundSettings);
-            ResetSoundCooldown();
-        }
     }
 
     private bool CanPlaySound()

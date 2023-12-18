@@ -2,8 +2,8 @@ using UnityEngine;
 
 public interface IEnemySound
 {
-    void PlayIdleSound(AudioClip clip);
-    void PlayAttackSound(AudioClip clip);
-    void PlayTakeDamageSound(AudioClip clip);
-    void PlayDeathSound(AudioClip clip);
+    void PlayIdleSound();
+    void PlayAttackSound();
+    void PlayTakeDamageSound();
+    void PlayDeathSound();
 }

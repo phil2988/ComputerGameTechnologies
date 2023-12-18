@@ -532,7 +532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1409789161}
   projectileSpeed: 4
-  fireInterval: 0.1
+  fireInterval: 2
 --- !u!1 &1050966458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1110,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.492
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1207,18 +1207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundSettings: {fileID: 11400000, guid: 6a74427f8545a384da27841475ca0f02, type: 2}
---- !u!114 &1721342929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721342912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f201bbbb1b59a1149a7ab75b87020231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1900533606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1571,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
+      propertyPath: soundCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
+      propertyPath: soundsManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288169171026708216, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
       propertyPath: detectionRadius
       value: 6
       objectReference: {fileID: 0}
@@ -1610,9 +1606,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8488131666902381145, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1721342928}
-    - targetCorrespondingSourceObject: {fileID: 8488131666902381145, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1721342929}
   m_SourcePrefab: {fileID: 100100000, guid: 746b05faa2c4c2948bf7fcbe3171a6cc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
