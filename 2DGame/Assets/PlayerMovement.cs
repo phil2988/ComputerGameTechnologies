@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private bool left;
     private bool right;
     private Vector2 lastDirection;
+
+    [SerializeField] private PlayerStats stats;
     // Update is called once per frame
     void Update()
     {
@@ -97,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Movement
-        rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement.normalized * stats.MovementSpeed * Time.fixedDeltaTime);
 
         //Attack
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,6 +19,18 @@ public class UpgradeScript : MonoBehaviour
 
     [SerializeField] private int range;
     
+    [SerializeField] private Money money;
+    [SerializeField] private int startCost;
+    [SerializeField] private int increase;
+
+    private int healthCounter;
+    private int damageCounter;
+    private int movementSpeedCounter;
+    private int firerateCounter;
+    private int luckCounter;
+
+    private PlayerStats stats;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +39,8 @@ public class UpgradeScript : MonoBehaviour
         damageButton.onClick.AddListener(OnClickDamageFunction);
         movementspeedButton.onClick.AddListener(OnClickMovementSpeedFunction);
         luckButton.onClick.AddListener(OnClickLuckFunction);
+        
+        stats = player.GetComponent<PlayerStats>();
     }
 
     private void Update()
@@ -37,6 +52,22 @@ public class UpgradeScript : MonoBehaviour
             {
                 upgradeMenu.SetActive(!upgradeMenu.activeSelf);
             }
+
+            if (upgradeMenu.activeSelf)
+            {
+                healthButton.GetComponentInChildren<TextMeshProUGUI>().text =
+                    "Health " + "(" + (startCost + healthCounter * increase) + ")";
+                firerateButton.GetComponentInChildren<TextMeshProUGUI>().text =
+                    "(WIP) Firerate " + "(" + (startCost + firerateCounter * increase) + ")";
+                damageButton.GetComponentInChildren<TextMeshProUGUI>().text =
+                    "Damage " + "(" + (startCost + damageCounter * increase) + ")";
+                movementspeedButton.GetComponentInChildren<TextMeshProUGUI>().text =
+                    "Movement Speed " + "(" + (startCost + movementSpeedCounter * increase) + ")";
+                luckButton.GetComponentInChildren<TextMeshProUGUI>().text =
+                    "(WIP) Luck " + "(" + (startCost + luckCounter * increase) + ")";
+                
+                
+            }
         }
         
     }
@@ -46,35 +77,45 @@ public class UpgradeScript : MonoBehaviour
         //If enough
         //Upgrade stat
         //else nothing
+        if (money.useMoney(startCost + (healthCounter * increase)))
+        {
+            healthCounter++;
+            stats.AddMaxHealth(10);
+            stats.Heal(10);
+        }
     }
     void OnClickFirerateFunction()
     {
-        //Check money
-        //If enough
-        //Upgrade stat
-        //else nothing
+        if (money.useMoney(startCost + firerateCounter * increase))
+        {
+            firerateCounter++;
+            stats.Firerate = stats.Firerate+5;
+        }
     }
     void OnClickDamageFunction()
     {
-        //Check money
-        //If enough
-        //Upgrade stat
-        //else nothing
+        if (money.useMoney(startCost + damageCounter * increase))
+        {
+            damageCounter++;
+            stats.Damage= stats.Damage+2;
+        }
     }
 
     void OnClickMovementSpeedFunction()
     {
-        //Check money
-        //If enough
-        //Upgrade stat
-        //else nothing
+        if (money.useMoney(startCost + movementSpeedCounter * increase))
+        {
+            movementSpeedCounter++;
+            stats.MovementSpeed= stats.MovementSpeed+5;
+        }
     }
 
     void OnClickLuckFunction()
     {
-        //Check money
-        //If enough
-        //Upgrade stat
-        //else nothing
+        if (money.useMoney(startCost + luckCounter * increase))
+        {
+            luckCounter++;
+            stats.Luck = stats.Luck+5;
+        }
     }
 }

@@ -62,6 +62,49 @@ public class AudioManager : MonoBehaviour
         sound.source.Play();
     }
     
+    public static void PlayLoopSoundStatic(string name)
+    {
+        if (instance == null)
+        {
+            Debug.LogWarning("No audio manager");
+            return;
+        }
+        instance.PlayLoop(name);
+    }
+    public void PlayLoop(string name)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        if (sound == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        sound.source.loop = true;
+        sound.source.Play();
+        sound.source.loop = true;
+    }
+    
+    public static void StopAllStatic()
+    {
+        if (instance == null)
+        {
+            Debug.LogWarning("No audio manager");
+            return;
+        }
+
+        instance.StopAll();
+    }
+
+    private void StopAll()
+    {
+        foreach (var sound in sounds)
+        {
+            sound.source.Stop();
+        }
+        
+    }
+    
     public static void TransitionToStatic(string name)
     {
         if (instance == null)
