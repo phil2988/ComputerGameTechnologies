@@ -47,6 +47,14 @@ public class TerrainGeneration : MonoBehaviour
 
     void Start()
     {
+        StartGeneration();
+    }
+
+    public void StartGeneration()
+    {
+        ClearTilemap(terrainTileMap);
+        ClearTilemap(voidTileMap);
+
         terrainTexture = new(pixWidth, pixHeight);
 
         // Fill the texture with white
@@ -54,7 +62,7 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int y = 0; y < pixHeight; y++)
             {
-                if(IsTileInTilemapsEmpty(x + startPos.x, y + startPos.y))
+                if (IsTileInTilemapsEmpty(x + startPos.x, y + startPos.y))
                 {
                     terrainTexture.SetPixel(x, y, TileColors.Where((tile) => tile.Key == TileTypes.Void).Single().Value);
                 }
@@ -102,6 +110,17 @@ public class TerrainGeneration : MonoBehaviour
         Debug.Log("Done!");
 
         Debug.Log("Done Generating Texture!");
+    }
+
+    void ClearTilemap(Tilemap tilemap)
+    {
+        for (int x = startPos.x; x < pixWidth; x++)
+        {
+            for (int y = startPos.y; y < pixHeight; y++)
+            {
+                tilemap.SetTile(new Vector3Int(x, y, 0), null);
+            }
+        }
     }
 
     void LoadTiles()
@@ -266,7 +285,7 @@ public class TerrainGeneration : MonoBehaviour
 
     }
 
-    void GeneratePointsOfInterest(int likelyhood = 10 /*int radius = 15, int differentRadius = 4*/)
+    public void GeneratePointsOfInterest(int likelyhood = 100 /*int radius = 15, int differentRadius = 4*/)
     {
         for (int x = 0; x < pixWidth; x++)
         {

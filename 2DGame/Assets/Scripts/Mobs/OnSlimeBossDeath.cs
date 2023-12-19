@@ -13,11 +13,6 @@ public class OnSlimeBossDeath : MonoBehaviour
  
     public void OnDeath()
     {
-        for (int i = 0; i < smallSlimesSpawnCount; i++)
-        {
-            Instantiate(smallSlime, transform.position, Quaternion.identity);
-        }
-
         if (gameObject != null)
         {
                Destroy(gameObject);

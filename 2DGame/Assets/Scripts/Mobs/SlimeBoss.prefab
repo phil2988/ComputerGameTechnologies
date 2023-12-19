@@ -14,10 +14,11 @@ GameObject:
   - component: {fileID: 1181976352643050634}
   - component: {fileID: 6300135239642884101}
   - component: {fileID: 6544558930530832704}
-  - component: {fileID: -4272759930761046501}
+  - component: {fileID: -4061612669114819318}
+  - component: {fileID: 6988559656240270016}
   m_Layer: 0
   m_Name: SlimeBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 2
   detectionRadius: 10
+  soundCooldown: 0
 --- !u!70 &6544558930530832704
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -189,7 +191,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.058929026, y: -0.45410547}
   m_Size: {x: 1.3354695, y: 0.8848206}
   m_Direction: 1
---- !u!114 &-4272759930761046501
+--- !u!114 &-4061612669114819318
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,8 +200,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 7466720096231602599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d1932e1b042a84a9c0ad4fa1ffe75b, type: 3}
+  m_Script: {fileID: 11500000, guid: 21a10dceb2f6fd64aa19bc5b06add47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallSlimesSpawnCount: 4
-  smallSlime: {fileID: 7466720096231602599, guid: 3b1e3b1fccc14184f91eda887fc156a3, type: 3}
+  currentHealth: 0
+  maxHealth: 0
+  OnHitWithReference:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeathWithReference:
+    m_PersistentCalls:
+      m_Calls: []
+  isDead: 0
+--- !u!114 &6988559656240270016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466720096231602599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c423c8fae0c2e7d4385f7b4aacac178a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistanceThreshold: 2
+  attackDelay: 2
+  damageAmount: 25

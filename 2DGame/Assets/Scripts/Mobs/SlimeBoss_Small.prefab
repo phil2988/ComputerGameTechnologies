@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 862159370714550373}
   m_Layer: 0
   m_Name: SlimeBoss_Small
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 2
   detectionRadius: 10
+  soundCooldown: 0
 --- !u!70 &6544558930530832704
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

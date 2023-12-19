@@ -21,9 +21,13 @@ public class Money : MonoBehaviour
         coinCounter.text = ": " + amount;
     }
 
-    public void addCoin()
+    public void addCoin(int amountToAdd = 0)
     {
-        amount++;
+        if(amountToAdd == 0)
+        {
+            amount++;
+        }
+        amount += amountToAdd;
     }
 
     public bool useMoney(int cost)

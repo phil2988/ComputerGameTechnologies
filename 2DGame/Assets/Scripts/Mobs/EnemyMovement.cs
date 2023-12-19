@@ -48,7 +48,7 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
 
         if (CanPlaySound())
         {
-            this.soundsManager.PlayIdleSound();
+            //this.soundsManager.PlayIdleSound();
             ResetSoundCooldown();
         }
     }
@@ -68,7 +68,7 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
     public void BeIdle()
     {
         rb.velocity = Vector2.zero;
-        anim.SetTrigger("IdleTrigger");
+        //anim.SetTrigger("IdleTrigger");
     }
 
     private bool CanPlaySound()
