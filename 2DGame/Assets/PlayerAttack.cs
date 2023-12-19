@@ -10,7 +10,6 @@ public class PlayerAttack : MonoBehaviour
     public Animator animator;
     bool attackY;
     bool attackX;
-    // Update is called once per frame
     public PlayerMovement pm;
     public float attackRadius;
 
