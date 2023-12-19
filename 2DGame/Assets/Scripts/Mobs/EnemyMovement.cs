@@ -46,10 +46,13 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
         FlipSprite(direction.x);
         anim.SetTrigger("WalkTrigger");
 
-        if (CanPlaySound())
+        if(soundsManager != null )
         {
-            this.soundsManager.PlayIdleSound();
-            ResetSoundCooldown();
+            if (CanPlaySound())
+            {
+                this.soundsManager.PlayIdleSound();
+                ResetSoundCooldown();
+            }
         }
     }
 
