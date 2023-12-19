@@ -9,7 +9,7 @@ namespace Assets.Scripts.AI
 {
     public interface IEnemyMovement
     {
-        void MoveTowardsPlayer(Transform player);
+        void MoveTowardsPlayer();
         void BeIdle();
     }
 }
