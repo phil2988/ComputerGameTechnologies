@@ -71,6 +71,7 @@ public class PlayerStats : MonoBehaviour
     public void AddMaxHealth(int value)
     {
         maxHealth = maxHealth + value;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void Heal(int value)

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public bool gameOver;
+    public bool menu;
 
     Vector2 movement;
 
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        if (gameOver == true)
+        if (gameOver == true || menu == true)
         {
             return;
         }

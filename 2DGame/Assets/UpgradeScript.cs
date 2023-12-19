@@ -30,6 +30,7 @@ public class UpgradeScript : MonoBehaviour
     private int luckCounter;
 
     private PlayerStats stats;
+    private PlayerMovement movement;
     
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class UpgradeScript : MonoBehaviour
         luckButton.onClick.AddListener(OnClickLuckFunction);
         
         stats = player.GetComponent<PlayerStats>();
+        movement = player.GetComponent<PlayerMovement>();
     }
 
     private void Update()
@@ -55,6 +57,7 @@ public class UpgradeScript : MonoBehaviour
 
             if (upgradeMenu.activeSelf)
             {
+                movement.menu = true;
                 healthButton.GetComponentInChildren<TextMeshProUGUI>().text =
                     "Health " + "(" + (startCost + healthCounter * increase) + ")";
                 firerateButton.GetComponentInChildren<TextMeshProUGUI>().text =
@@ -65,8 +68,10 @@ public class UpgradeScript : MonoBehaviour
                     "Movement Speed " + "(" + (startCost + movementSpeedCounter * increase) + ")";
                 luckButton.GetComponentInChildren<TextMeshProUGUI>().text =
                     "(WIP) Luck " + "(" + (startCost + luckCounter * increase) + ")";
-                
-                
+            }
+            else
+            {
+                movement.menu = false;
             }
         }
         
@@ -97,7 +102,7 @@ public class UpgradeScript : MonoBehaviour
         if (money.useMoney(startCost + damageCounter * increase))
         {
             damageCounter++;
-            stats.Damage= stats.Damage+2;
+            stats.Damage= stats.Damage+5;
         }
     }
 
@@ -106,7 +111,7 @@ public class UpgradeScript : MonoBehaviour
         if (money.useMoney(startCost + movementSpeedCounter * increase))
         {
             movementSpeedCounter++;
-            stats.MovementSpeed= stats.MovementSpeed+5;
+            stats.MovementSpeed= stats.MovementSpeed+2;
         }
     }
 
