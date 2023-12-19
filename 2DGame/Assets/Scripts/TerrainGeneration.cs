@@ -285,7 +285,7 @@ public class TerrainGeneration : MonoBehaviour
 
     }
 
-    public void GeneratePointsOfInterest(int likelyhood = 100 /*int radius = 15, int differentRadius = 4*/)
+    public void GeneratePointsOfInterest(int likelyhood = 10 /*int radius = 15, int differentRadius = 4*/)
     {
         for (int x = 0; x < pixWidth; x++)
         {

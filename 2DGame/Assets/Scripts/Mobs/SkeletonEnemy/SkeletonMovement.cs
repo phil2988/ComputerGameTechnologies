@@ -39,11 +39,11 @@ public class SkeletonMovement : MonoBehaviour
         {
             if(distanceToPlayer < kiteBackwardsRadius)
             {
-                MoveAwayFromPlayer(player);
+                MoveAwayFromPlayer();
             }
             else if(distanceToPlayer > attackRadius)
             {
-                MoveTowardsPlayer(player);
+                MoveTowardsPlayer();
             }
             else
             {
@@ -56,7 +56,7 @@ public class SkeletonMovement : MonoBehaviour
         }
     }
 
-    public void MoveTowardsPlayer(Transform player)
+    public void MoveTowardsPlayer()
     {
         Vector2 direction = (player.position - transform.position).normalized;
         rb.velocity = direction * movementSpeed;
@@ -70,7 +70,7 @@ public class SkeletonMovement : MonoBehaviour
         }
     }
 
-    public void MoveAwayFromPlayer(Transform player)
+    public void MoveAwayFromPlayer()
     {
         Vector2 direction = (transform.position - player.position).normalized;
         rb.velocity = direction * movementSpeed;

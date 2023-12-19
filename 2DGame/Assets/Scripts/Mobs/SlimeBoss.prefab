@@ -224,6 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c423c8fae0c2e7d4385f7b4aacac178a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistanceThreshold: 2
+  attackDistanceThreshold: 3
   attackDelay: 2
   damageAmount: 25

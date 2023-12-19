@@ -72,12 +72,19 @@ public class PlayerStats : MonoBehaviour
     {
         maxHealth = maxHealth + value;
     }
-    
-    
 
     public void Heal(int value)
     {
-        currHealth = currHealth + value;
+        if (currHealth + value > maxHealth)
+        {
+            currHealth = maxHealth;
+        }
+        else
+        {
+            currHealth += value;
+        }
+
+        healthBar.SetHealth(currHealth);
     }
     
     public int Firerate

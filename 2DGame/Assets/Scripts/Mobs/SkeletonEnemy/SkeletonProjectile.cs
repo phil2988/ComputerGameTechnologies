@@ -42,6 +42,9 @@ public class SkeletonProjectile : MonoBehaviour
     void FireProjectile()
     {
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+
+        projectile.GetComponent<DamagePlayer>().damage = gameObject.GetComponent<EnemyAI>().damageAmount;
+        
         Vector2 direction = (player.position - transform.position).normalized;
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
         projectileRb.velocity = direction * projectileSpeed;

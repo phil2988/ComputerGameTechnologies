@@ -17,6 +17,10 @@ GameObject:
   - component: {fileID: 1499966598145233546}
   - component: {fileID: 6345477159130309443}
   - component: {fileID: 6021301116066700303}
+  - component: {fileID: -144105272866876159}
+  - component: {fileID: -119484075526525409}
+  - component: {fileID: -161281618683183638}
+  - component: {fileID: -775153619437237620}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -87,7 +91,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &973669904486025130
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -332,3 +336,78 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.21, y: 0.034}
   m_EdgeRadius: 0
+--- !u!114 &-144105272866876159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5981058965544929862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d61268e1a7683409edc2810e1da5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSettings: {fileID: 11400000, guid: d58a179e63a82b24c93ad921e0ea3c5d, type: 2}
+--- !u!114 &-119484075526525409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5981058965544929862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c423c8fae0c2e7d4385f7b4aacac178a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistanceThreshold: 0
+  attackDelay: 0
+  damageAmount: 5
+--- !u!114 &-161281618683183638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5981058965544929862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a10dceb2f6fd64aa19bc5b06add47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 35
+  maxHealth: 35
+  OnHitWithReference:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeathWithReference:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -775153619437237620}
+        m_TargetAssemblyTypeName: DropChance, Assembly-CSharp
+        m_MethodName: DropCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isDead: 0
+--- !u!114 &-775153619437237620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5981058965544929862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d926e08eb8d39bf41b8f56d70e6b51ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 2272517528717507608, guid: 160b7eff0b6fc774cb3041246efa08d4, type: 3}
+  dropChance: 1

@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float attackDistanceThreshold = 0.8f;
     [SerializeField] private float attackDelay = 1;
     private float passedTime = 1;
-    public float damageAmount;
+    public int damageAmount;
 
     private void Update()
     {
@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
                 passedTime = 0;
                 PlayerStats playerStats = player.GetComponent<PlayerStats>();
                 Debug.Log("Kill!");
-                playerStats.TakeDamage((int)damageAmount);
+                playerStats.TakeDamage(damageAmount);
             }
         }
 
