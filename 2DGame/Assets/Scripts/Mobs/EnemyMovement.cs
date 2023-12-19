@@ -27,7 +27,7 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
 
     void Update()
     {
-        distanceToPlayer = Vector2.Distance(transform.position, this.player.transform.position);
+        distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         if (distanceToPlayer <= detectionRadius)
         {
             MoveTowardsPlayer();
@@ -40,7 +40,7 @@ public class EnemyMovement : MonoBehaviour, IEnemyMovement
 
     public void MoveTowardsPlayer()
     {
-        Vector2 direction = (this.player.position - transform.position).normalized;
+        Vector2 direction = (player.position - transform.position).normalized;
         rb.velocity = direction * movementSpeed;
 
         FlipSprite(direction.x);

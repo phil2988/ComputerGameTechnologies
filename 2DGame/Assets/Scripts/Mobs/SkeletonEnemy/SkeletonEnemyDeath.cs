@@ -7,13 +7,11 @@ public class SkeletonEnemyDeath : MonoBehaviour, IEnemyDeath
 
     public Animator anim;
     private EnemyMovement enemyMovement;
-    private ZombieAudio zombieAudio;
 
     private void Start()
     {
         lootAmount = Mathf.Max(1, lootAmount);
         enemyMovement = GetComponent<EnemyMovement>();
-        zombieAudio = GetComponent<ZombieAudio>();
 
     }
 

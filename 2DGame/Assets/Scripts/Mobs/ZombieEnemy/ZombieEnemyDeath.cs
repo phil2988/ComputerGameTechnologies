@@ -5,16 +5,14 @@ public class ZombieEnemyDeath : MonoBehaviour, IEnemyDeath
     public GameObject lootPrefab;
     public int lootAmount = 1;
 
-    public Animator anim;
-    private EnemyMovement enemyMovement;
-    private ZombieAudio zombieAudio;
+    [SerializeField]
+    private Animator anim;
+    private EnemySoundsManager soundManager;
 
     private void Start()
     {
         lootAmount = Mathf.Max(1, lootAmount);
-        enemyMovement = GetComponent<EnemyMovement>();
-        zombieAudio = GetComponent<ZombieAudio>();
-
+        soundManager = GetComponent<EnemySoundsManager>();
     }
 
     public void DropLoot()
@@ -27,7 +25,7 @@ public class ZombieEnemyDeath : MonoBehaviour, IEnemyDeath
 
     public void Die()
     {
-        zombieAudio.PlayDeathClip();
+        soundManager.PlayDeathSound();
         anim.SetTrigger("DieTrigger");
         Invoke("DropLootAndDestroy", 0.5f);
     }

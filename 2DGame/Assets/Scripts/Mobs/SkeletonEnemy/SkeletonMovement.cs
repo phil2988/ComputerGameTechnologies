@@ -7,14 +7,17 @@ public class SkeletonMovement : MonoBehaviour
     public float playerIsDetectedRadius;
     public float kiteBackwardsRadius;
     public float attackRadius;
-    
+    public float soundCooldown;
+
     float distanceToPlayer;
     public bool playerDetected = false;
+    float timeSinceLastSound;
 
     private Transform player;
     private Animator anim;
     private Rigidbody2D rb;
-    private ScaleDeathAnimation scaleDeathAnimationScript;
+    private ScaleDeathAnimation scaleDeathAnimationScript; // Disabled
+    private EnemySoundsManager soundsManager;
 
     void Start()
     {
@@ -22,6 +25,7 @@ public class SkeletonMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         scaleDeathAnimationScript = GetComponent<ScaleDeathAnimation>();
+        soundsManager = GetComponent<EnemySoundsManager>();
     }
 
     void Update()
@@ -59,6 +63,11 @@ public class SkeletonMovement : MonoBehaviour
 
         FlipSprite(direction.x);
         anim.SetTrigger("WalkTrigger");
+        if (CanPlaySound())
+        {
+            this.soundsManager.PlayIdleSound();
+            ResetSoundCooldown();
+        }
     }
 
     public void MoveAwayFromPlayer(Transform player)
@@ -68,6 +77,11 @@ public class SkeletonMovement : MonoBehaviour
 
         FlipSprite(direction.x);
         anim.SetTrigger("WalkTrigger");
+        if (CanPlaySound())
+        {
+            this.soundsManager.PlayIdleSound();
+            ResetSoundCooldown();
+        }
     }
 
     void FlipSprite(float directionX)
@@ -86,6 +100,16 @@ public class SkeletonMovement : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         anim.SetTrigger("IdleTrigger");
+    }
+
+    private bool CanPlaySound()
+    {
+        return Time.time - timeSinceLastSound >= soundCooldown;
+    }
+
+    private void ResetSoundCooldown()
+    {
+        timeSinceLastSound = Time.time;
     }
 
     public void StartDeathAnimation()
